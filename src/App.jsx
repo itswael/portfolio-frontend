@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 
 import Contact from './components/Contact';
 import HeroPage from "./components/HeroPage.jsx";
+import Footer from "./components/Footer.jsx";
 
 const App = () => {
     return (
@@ -10,6 +11,7 @@ const App = () => {
             <Navbar/>
             <HeroPage/>
             <Contact/>
+            <Footer/>
         </>
     );
 };
