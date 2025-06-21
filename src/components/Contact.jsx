@@ -7,7 +7,7 @@ const Contact = () => {
             {/* Header Section */}
             <div className="mb-8">
                 <h1 className="text-3xl font-bold mb-2">Send a Hi</h1>
-                <p className="text-gray-600">Leave your email and I will get back to you within 24 hours</p>
+                <p className="text-gray-600">Feel free to contact me if having any questions. I'm available for new projects or just for chatting.</p>
             </div>
 
             <div className="flex flex-col md:flex-row gap-8">
@@ -15,7 +15,7 @@ const Contact = () => {
                 <div className="md:w-1/2 space-y-6">
                     <ContactItem icon={<Email className="text-blue-500" />} title="Email" content="m.mohammadwael@ufl.edu" />
                     <ContactItem icon={<Phone className="text-blue-500" />} title="Phone" content="+1 (352) 709 94 05" />
-                    <ContactItem icon={<LocationOn className="text-blue-500" />} title="Address" content="3800 SW 34th St. Gainesville, FL, USA" />
+                    <ContactItem icon={<LocationOn className="text-blue-500" />} title="Address" content="Florida, USA" />
                     <ContactItem icon={<Schedule className="text-blue-500" />} title="Working hours" content="8 a.m. – 11 p.m." />
                 </div>
 
@@ -30,7 +30,7 @@ const Contact = () => {
                         <InputField label="Name" placeholder="Timon" />
                         <InputField
                             label="Message *"
-                            placeholder="I would like to connect ..."
+                            placeholder="Let's connect for ..."
                             multiline
                             rows={4}
                         />
