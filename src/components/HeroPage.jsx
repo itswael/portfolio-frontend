@@ -12,14 +12,14 @@ const HeroPage = () => {
                         Mohammad Wael
                     </h1>
                     <p className="text-xl text-gray-600 mb-8">
-                        Anim cute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.
+                        At the intersection of engineering and exploration — from scalable APIs to AI-driven insights. My work spans resilient backends, intuitive UIs, cloud deployment, robust databases, and intelligent automation.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium flex items-center justify-center">
-                            Get started
+                            Get in touch
                         </button>
                         <button className="text-blue-600 hover:text-blue-700 px-6 py-3 rounded-md font-medium flex items-center justify-center">
-                            Learn more <ArrowForward className="ml-2" />
+                            Explore further <ArrowForward className="ml-2" />
                         </button>
                     </div>
                 </div>
