@@ -5,7 +5,7 @@ import Contact from './components/Contact';
 import HeroPage from "./components/HeroPage.jsx";
 import Footer from "./components/Footer.jsx";
 import TitleBar from "./components/titleBar.jsx";
-import StackingCards from "./components/Projects.jsx";
+import Projects from "./components/Projects.jsx";
 
 const App = () => {
     return (
@@ -13,6 +13,7 @@ const App = () => {
             <TitleBar/>
             <Navbar/>
             <HeroPage/>
+            <Projects/>
             <Contact/>
             <Footer/>
         </>
