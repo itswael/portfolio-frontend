@@ -3,7 +3,7 @@ import { ArrowForward} from '@mui/icons-material';
 
 const HeroPage = () => {
     return (
-        <div className="bg-gray-50 min-h-190">
+        <div className="bg-gray-50 min-h-[100vh]">
 
             {/* Hero Content */}
             <div className="container mx-auto px-6 py-16 md:py-24">
