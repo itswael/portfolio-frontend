@@ -75,7 +75,7 @@ const StackingCards = () => {
             </div>
 
             {/* Stacking Cards Container */}
-            <div className="min-h-[220vh] relative bg-white">
+            <div className=" relative bg-white">
                 {cards.map((card, index) => (
                     <div
                         key={card.id}
