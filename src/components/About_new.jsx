@@ -57,7 +57,7 @@ export default function About() {
 
                     {/* Right Content - Profile Image and Info */}
                     <div className="lg:col-span-1">
-                        <div className="sticky top-32">
+                        <div className="sticky top-32 pl-8">
                             {/* Profile Image */}
                             <div className="mb-6">
                                 <div className="w-48 h-48 mx-auto lg:mx-0 rounded-full bg-gray-300 overflow-hidden shadow-lg">
@@ -77,7 +77,7 @@ export default function About() {
                             {/* Contact Info */}
                             <div className="text-center lg:text-left space-y-3">
                                 <div className="text-gray-600">
-                                    <p className="text-sm">yourname@email.com</p>
+                                    <p className="text-sm">errwael@gmail.com</p>
                                 </div>
                                 
                                 {/* Social Links */}
