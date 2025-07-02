@@ -7,7 +7,7 @@ import HeroPage from "./components/HeroPage.jsx";
 import Footer from "./components/Footer.jsx";
 import TitleBar from "./components/titleBar.jsx";
 import Projects from "./components/Project1.jsx";
-import About from "./components/About.jsx";
+import About from "./components/About_new.jsx";
 
 const App = () => {
     return (
