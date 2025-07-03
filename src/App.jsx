@@ -6,8 +6,9 @@ import Contact from './components/Contact';
 import HeroPage from "./components/HeroPage.jsx";
 import Footer from "./components/Footer.jsx";
 import TitleBar from "./components/titleBar.jsx";
-import Projects from "./components/Project1.jsx";
+import Projects from "./components/project1.jsx";
 import About from "./components/About_new.jsx";
+import WorkEx from "./components/WorkEx.jsx";
 
 const App = () => {
     return (
@@ -16,6 +17,7 @@ const App = () => {
             <Navbar/>
             <HeroPage/>
             <About/>
+            <WorkEx/>
             <Projects/>
             {/* Main content wrapper with top padding to account for fixed navbar
             <main className="pt-52"> {/* pt-52 = 208px, adjust based on your navbar height */}
