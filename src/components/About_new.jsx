@@ -31,11 +31,6 @@ export default function About() {
                                 <p>
                                     I approach software with a builder's mindset: invent, simplify, dive deep, and deliver. I value systems that are not only functional, but elegant. I care about clean code, thoughtful abstractions, and above all, how technology can serve people better.
                                 </p>
-                                
-                                <p>
-                                    When I'm not being a jerk by forgetting to label my Sketch layers, eating all the office candy, and showing up for work on time every day (so annoying), I enjoy being satisfied with my own work, photography, movies, gardening, food, and occasionally throwing down in LinkedIn with my CSS. 
-                                    <a href="#" className="text-blue-600 hover:underline ml-1">Peep the resume</a> to take a closer look at work history and whatnot.
-                                </p>
                             </div>
                         </div>
 
