@@ -1,0 +1,94 @@
+{
+  "timeline": [
+    {
+      "id": 1,
+      "type": "work",
+      "title": "Founder & AI Engineer",
+      "company": "BlinkFind Pvt Ltd",
+      "location": "Remote",
+      "startDate": "Sep 2024",
+      "endDate": "Present",
+      "duration": "4 months",
+      "description": "Founded BlinkFind to develop One platform for AI-powered productivity, business automation and daily life solutions.",
+      "achievements": [
+        "Our 1st product QuickFind App is your ultimate solution for lost and found items.",
+        "Built scalable AI-powered solutions serving 1000+ users",
+        "Implemented modern tech stack with React, Node.js, and AI integration"
+      ],
+      "technologies": ["React", "Node.js", "AI/ML", "MongoDB", "AWS"],
+      "icon": "🚀"
+    },
+    {
+      "id": 2,
+      "type": "work",
+      "title": "AI Engineer Contract",
+      "company": "Viewit Dubai",
+      "location": "Dubai, UAE",
+      "startDate": "Feb 2025",
+      "endDate": "Mar 2025",
+      "duration": "2 months",
+      "description": "Contributed significantly to building and optimizing the AI Services, ensuring speed, scalability, and functionality.",
+      "achievements": [
+        "Developed responsive, high-performance AI Agent, AI Integration, Virtual Agents real estate TikTok.",
+        "Collaborated with teams to deliver innovative, user-focused solutions aligned with business objectives.",
+        "Improved system performance by 40% through optimization techniques"
+      ],
+      "technologies": ["Python", "TensorFlow", "FastAPI", "Docker", "Redis"],
+      "icon": "🤖"
+    },
+    {
+      "id": 3,
+      "type": "work",
+      "title": "Open Source Contributor (AI & Android)",
+      "company": "Hacktoberfest Open Source",
+      "location": "Remote",
+      "startDate": "Oct 2023",
+      "endDate": "Jan 2025",
+      "duration": "1 year 4 months",
+      "description": "Developed Android, AI Apps for Math-Tutor, AI Chatbot, and Rider using Java, Kotlin, Android Studio, Python and Jetpack Compose.",
+      "achievements": [
+        "Contributed 50K+ lines of code to a well-established codebase, leveraging Git and GitHub.",
+        "Engineered innovative Android applications that improved user engagement by 30%.",
+        "Mentored 20+ junior developers in open source contributions"
+      ],
+      "technologies": ["Java", "Kotlin", "Android Studio", "Python", "Git", "GitHub"],
+      "icon": "👨‍💻"
+    },
+    {
+      "id": 4,
+      "type": "education",
+      "title": "Bachelor of Computer Applications",
+      "company": "Guru Gobind Singh Indraprastha University",
+      "location": "Delhi, India",
+      "startDate": "2021",
+      "endDate": "2024",
+      "duration": "3 years",
+      "description": "Comprehensive study of computer science fundamentals, software engineering, and modern programming paradigms.",
+      "achievements": [
+        "Graduated with First Class Honours (CGPA: 8.5/10)",
+        "Led multiple project teams and hackathon participations",
+        "Specialized in AI/ML and Mobile Application Development"
+      ],
+      "technologies": ["Java", "Python", "C++", "Database Systems", "Web Development"],
+      "icon": "🎓"
+    },
+    {
+      "id": 5,
+      "type": "education",
+      "title": "Senior Secondary Education",
+      "company": "Central Board of Secondary Education",
+      "location": "Delhi, India",
+      "startDate": "2019",
+      "endDate": "2021",
+      "duration": "2 years",
+      "description": "Focused on Mathematics, Physics, Chemistry, and Computer Science with emphasis on problem-solving and analytical thinking.",
+      "achievements": [
+        "Achieved 92% in Computer Science",
+        "Participated in National Science Olympiad",
+        "Developed first mobile application during senior year"
+      ],
+      "technologies": ["C++", "Basic Web Development", "Mathematics", "Physics"],
+      "icon": "📚"
+    }
+  ]
+}
