@@ -6,7 +6,10 @@ const Skills = () => {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [hoveredSkill, setHoveredSkill] = useState(null);
 
-    // Fixed positions for better layout - using a grid system
+    // Responsive positions for better layout - centered within container
+    const diagramWidth = 1100; // Total diagram width
+    const diagramHeight = 860; // Total diagram height
+    
     const categoryPositions = {
         frontend: { x: 50, y: 50, width: 300, height: 220 },
         backend: { x: 400, y: 50, width: 300, height: 220 },
@@ -173,7 +176,7 @@ const Skills = () => {
 
     return (
         <div className="min-h-screen bg-gray-50 py-16">
-            <Container maxWidth="xl">
+            <Container maxWidth="xl" className="px-4">
                 {/* Header */}
                 <div className="mb-16" style={{ textAlign: 'center' }}>
                     <Typography 
@@ -214,7 +217,15 @@ const Skills = () => {
                 </div>
 
                 {/* System Diagram */}
-                <div className="relative bg-white rounded-2xl shadow-lg p-8 mb-16" style={{ height: '900px', overflow: 'hidden' }}>
+                <div className="flex justify-center mb-16 px-4">
+                    <div 
+                        className="relative bg-white rounded-2xl shadow-lg p-4 sm:p-8 w-full" 
+                        style={{ 
+                            maxWidth: `${diagramWidth}px`, 
+                            height: `${diagramHeight}px`, 
+                            overflow: 'auto'
+                        }}
+                    >
                     {/* Background grid (optional) */}
                     <div className="absolute inset-0 opacity-5" style={{
                         backgroundImage: 'radial-gradient(circle, #9CA3AF 1px, transparent 1px)',
@@ -286,6 +297,7 @@ const Skills = () => {
                             <span>Technology Stack</span>
                         </div>
                     </div>
+                </div>
                 </div>
 
                 {/* Soft Skills */}
