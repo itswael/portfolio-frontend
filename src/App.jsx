@@ -9,7 +9,7 @@ import TitleBar from "./components/titleBar.jsx";
 import Projects from "./components/project1.jsx";
 import About from "./components/About_new.jsx";
 import WorkEx from "./components/WorkEx.jsx";
-import Skills from "./components/Skills.jsx";
+import Skills from "./components/Skills_new.jsx";
 
 const App = () => {
     return (
