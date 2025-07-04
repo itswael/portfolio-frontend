@@ -179,7 +179,7 @@ const Skills = () => {
                     <Typography variant="h2" className="font-bold text-gray-800 mb-4">
                         Technical Skills Architecture
                     </Typography>
-                    <Typography variant="h6" className="text-gray-600 max-w-3xl mx-auto">
+                    <Typography variant="h6" className="text-gray-600 max-w-3xl mx-auto text-center">
                         Interactive system diagram showcasing how different technologies work together in modern development
                     </Typography>
                     <div className="mt-6 space-y-2">
