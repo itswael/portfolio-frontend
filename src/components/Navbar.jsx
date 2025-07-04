@@ -1,13 +1,15 @@
 import { Disclosure, DisclosureButton, DisclosurePanel} from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from '../assets/logo.svg'
+import {useState} from 'react'
 
 const navigation = [
     { name: 'Home', href: '#', current: true },
+    { name: 'About', href: '#', current: false },
+    { name: 'Work Experience', href: '#', current: false },
     { name: 'Projects', href: '#', current: false },
     { name: 'Skills', href: '#', current: false },
-    { name: 'About', href: '#', current: false },
-    { name: 'Contact', href: '/contact', current: false },
+    { name: 'Contact', href: '#', current: false },
 ]
 
 function classNames(...classes) {
@@ -15,6 +17,24 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+    const [navigation, setNavigation] = useState([
+        { name: 'Home', href: '#', current: true },
+        { name: 'About', href: '#', current: false },
+        { name: 'Work Experience', href: '#', current: false },
+        { name: 'Projects', href: '#', current: false },
+        { name: 'Skills', href: '#', current: false },
+        { name: 'Contact', href: '#', current: false },
+    ])
+
+    function handleSelectTab(name) {
+        setNavigation(prevState =>
+            prevState.map(item => ({
+                ...item,
+                current: item.name === name,
+            }))
+        );
+    }
+
     //{SHADOW-MD}
     return (
         <Disclosure as="nav" className="bg-gray-50 fixed top-0 left-0 w-full z-50">
@@ -45,6 +65,7 @@ export default function Navbar() {
                                             item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                                             'rounded-md px-3 py-2 text-sm font-medium',
                                         )}
+                                        onClick={() => handleSelectTab(item.name)}
                                     >
                                         {item.name}
                                     </a>
