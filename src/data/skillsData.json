@@ -1,0 +1,147 @@
+{
+  "techSkills": {
+    "categories": [
+      {
+        "id": "frontend",
+        "name": "Frontend",
+        "description": "User Interface & Experience",
+        "icon": "🎨",
+        "color": "#3B82F6",
+        "position": { "x": 100, "y": 100 },
+        "skills": [
+          { "name": "React", "level": 90, "experience": "3+ years" },
+          { "name": "TypeScript", "level": 85, "experience": "2+ years" },
+          { "name": "JavaScript", "level": 95, "experience": "4+ years" },
+          { "name": "HTML/CSS", "level": 90, "experience": "4+ years" },
+          { "name": "Tailwind CSS", "level": 85, "experience": "2+ years" },
+          { "name": "Next.js", "level": 80, "experience": "1+ years" },
+          { "name": "Vue.js", "level": 70, "experience": "1+ years" }
+        ]
+      },
+      {
+        "id": "backend",
+        "name": "Backend",
+        "description": "Server-side Development",
+        "icon": "⚙️",
+        "color": "#10B981",
+        "position": { "x": 400, "y": 100 },
+        "skills": [
+          { "name": "Node.js", "level": 90, "experience": "3+ years" },
+          { "name": "Python", "level": 95, "experience": "4+ years" },
+          { "name": "Flask", "level": 85, "experience": "2+ years" },
+          { "name": "Express.js", "level": 80, "experience": "2+ years" },
+          { "name": "Spring Boot", "level": 75, "experience": "1+ years" },
+          { "name": "FastAPI", "level": 80, "experience": "1+ years" },
+          { "name": "Go", "level": 70, "experience": "1+ years" }
+        ]
+      },
+      {
+        "id": "database",
+        "name": "Databases",
+        "description": "Data Storage & Management",
+        "icon": "🗄️",
+        "color": "#F59E0B",
+        "position": { "x": 250, "y": 250 },
+        "skills": [
+          { "name": "PostgreSQL", "level": 85, "experience": "3+ years" },
+          { "name": "MongoDB", "level": 80, "experience": "2+ years" },
+          { "name": "Redis", "level": 75, "experience": "2+ years" },
+          { "name": "MySQL", "level": 80, "experience": "2+ years" },
+          { "name": "ElasticSearch", "level": 70, "experience": "1+ years" }
+        ]
+      },
+      {
+        "id": "cloud",
+        "name": "Cloud & DevOps",
+        "description": "Infrastructure & Deployment",
+        "icon": "☁️",
+        "color": "#8B5CF6",
+        "position": { "x": 550, "y": 250 },
+        "skills": [
+          { "name": "AWS", "level": 80, "experience": "2+ years" },
+          { "name": "Docker", "level": 85, "experience": "2+ years" },
+          { "name": "Kubernetes", "level": 70, "experience": "1+ years" },
+          { "name": "GitHub Actions", "level": 75, "experience": "2+ years" },
+          { "name": "Terraform", "level": 65, "experience": "1+ years" }
+        ]
+      },
+      {
+        "id": "aiml",
+        "name": "AI/ML",
+        "description": "Artificial Intelligence & Machine Learning",
+        "icon": "🧠",
+        "color": "#EF4444",
+        "position": { "x": 100, "y": 400 },
+        "skills": [
+          { "name": "TensorFlow", "level": 75, "experience": "2+ years" },
+          { "name": "PyTorch", "level": 70, "experience": "1+ years" },
+          { "name": "Scikit-learn", "level": 80, "experience": "2+ years" },
+          { "name": "OpenAI API", "level": 85, "experience": "1+ years" },
+          { "name": "Pandas", "level": 90, "experience": "3+ years" },
+          { "name": "NumPy", "level": 85, "experience": "3+ years" }
+        ]
+      },
+      {
+        "id": "tools",
+        "name": "Development Tools",
+        "description": "Version Control & Development",
+        "icon": "🔧",
+        "color": "#6B7280",
+        "position": { "x": 400, "y": 400 },
+        "skills": [
+          { "name": "Git", "level": 90, "experience": "4+ years" },
+          { "name": "GitHub", "level": 85, "experience": "4+ years" },
+          { "name": "VS Code", "level": 95, "experience": "4+ years" },
+          { "name": "Postman", "level": 80, "experience": "3+ years" },
+          { "name": "Figma", "level": 70, "experience": "2+ years" }
+        ]
+      }
+    ],
+    "connections": [
+      { "from": "frontend", "to": "backend", "label": "API Integration" },
+      { "from": "backend", "to": "database", "label": "Data Layer" },
+      { "from": "backend", "to": "cloud", "label": "Deployment" },
+      { "from": "backend", "to": "aiml", "label": "ML Integration" },
+      { "from": "aiml", "to": "database", "label": "Data Pipeline" },
+      { "from": "tools", "to": "cloud", "label": "CI/CD" }
+    ]
+  },
+  "softSkills": [
+    {
+      "name": "Problem Solving",
+      "description": "Breaking down complex problems into manageable solutions",
+      "icon": "🧩",
+      "level": 95
+    },
+    {
+      "name": "Team Collaboration",
+      "description": "Working effectively with cross-functional teams",
+      "icon": "🤝",
+      "level": 90
+    },
+    {
+      "name": "Communication",
+      "description": "Clear technical communication and documentation",
+      "icon": "💬",
+      "level": 85
+    },
+    {
+      "name": "Leadership",
+      "description": "Leading projects and mentoring team members",
+      "icon": "👑",
+      "level": 80
+    },
+    {
+      "name": "Adaptability",
+      "description": "Quickly learning new technologies and methodologies",
+      "icon": "🔄",
+      "level": 95
+    },
+    {
+      "name": "Critical Thinking",
+      "description": "Analyzing requirements and making informed decisions",
+      "icon": "🎯",
+      "level": 90
+    }
+  ]
+}
