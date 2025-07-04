@@ -39,18 +39,31 @@ const WorkEx = () => {
         <div className="min-h-screen bg-gray-50 py-16">
             <Container maxWidth="lg">
                 {/* Header Section */}
-                <div className="text-center mb-16">
+                <div className="mb-16" style={{ textAlign: 'center' }}>
                     <Typography 
                         variant="h2" 
                         className="font-bold text-gray-800 mb-4"
-                        sx={{ fontSize: { xs: '2.5rem', md: '3.5rem' } }}
+                        align="center"
+                        sx={{ 
+                            fontSize: { xs: '2.5rem', md: '3.5rem' },
+                            textAlign: 'center !important',
+                            width: '100%',
+                            display: 'block'
+                        }}
                     >
                         My Professional Journey
                     </Typography>
                     <Typography 
                         variant="h6" 
-                        className="text-gray-600 max-w-3xl mx-auto leading-relaxed"
-                        sx={{ fontSize: { xs: '1rem', md: '1.25rem' } }}
+                        className="text-gray-600"
+                        align="center"
+                        sx={{ 
+                            fontSize: { xs: '1rem', md: '1.25rem' },
+                            textAlign: 'center !important',
+                            maxWidth: '768px',
+                            margin: '0 auto',
+                            display: 'block'
+                        }}
                     >
                         A comprehensive timeline of my career growth, educational milestones, and 
                         the technologies that have shaped my professional development.
@@ -118,28 +131,7 @@ const WorkEx = () => {
                 <Fade in={true} timeout={600} key={animationKey}>
                     <div className="relative">
                         {/* Timeline stats */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                            <div className="bg-white rounded-2xl p-8 shadow-lg text-center group hover:shadow-xl transition-all duration-300 border border-gray-100">
-                                <div className="text-4xl font-bold text-blue-600 mb-3 group-hover:scale-110 transition-transform duration-300">
-                                    {timelineData.timeline.filter(item => item.type === 'work').length}
-                                </div>
-                                <div className="text-gray-600 font-medium">Work Experiences</div>
-                            </div>
-                            <div className="bg-white rounded-2xl p-8 shadow-lg text-center group hover:shadow-xl transition-all duration-300 border border-gray-100">
-                                <div className="text-4xl font-bold text-purple-600 mb-3 group-hover:scale-110 transition-transform duration-300">
-                                    {timelineData.timeline.filter(item => item.type === 'education').length}
-                                </div>
-                                <div className="text-gray-600 font-medium">Educational Milestones</div>
-                            </div>
-                            <div className="bg-white rounded-2xl p-8 shadow-lg text-center group hover:shadow-xl transition-all duration-300 border border-gray-100">
-                                <div className="text-4xl font-bold text-green-600 mb-3 group-hover:scale-110 transition-transform duration-300">
-                                    {timelineData.timeline.reduce((total, item) => {
-                                        return total + (item.technologies ? item.technologies.length : 0);
-                                    }, 0)}
-                                </div>
-                                <div className="text-gray-600 font-medium">Technologies Used</div>
-                            </div>
-                        </div>
+
 
                         {/* Timeline Items */}
                         <div className="relative max-w-4xl mx-auto">
