@@ -9,6 +9,7 @@ import TitleBar from "./components/titleBar.jsx";
 import Projects from "./components/project1.jsx";
 import About from "./components/About_new.jsx";
 import WorkEx from "./components/WorkEx.jsx";
+import Skills from "./components/Skills.jsx";
 
 const App = () => {
     return (
@@ -17,6 +18,7 @@ const App = () => {
             <Navbar/>
             <HeroPage/>
             <About/>
+            <Skills/>
             <WorkEx/>
             <Projects/>
             {/* Main content wrapper with top padding to account for fixed navbar
