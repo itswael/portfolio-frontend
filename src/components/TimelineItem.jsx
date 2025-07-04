@@ -92,7 +92,7 @@ const TimelineItem = ({ item, index, isLast }) => {
                                         fontWeight: 500
                                     }}
                                 >
-                                    {item.organization}
+                                    {item.company}
                                 </Typography>
                             </div>
                             <IconButton 
@@ -110,7 +110,7 @@ const TimelineItem = ({ item, index, isLast }) => {
                         <div className="flex flex-wrap gap-4 mb-4">
                             <div className="flex items-center text-gray-600">
                                 <CalendarToday className="w-4 h-4 mr-2" />
-                                <span className="font-medium">{item.duration}</span>
+                                <span className="font-medium">{item.startDate} - {item.endDate} ({item.duration})</span>
                             </div>
                             <div className="flex items-center text-gray-600">
                                 <LocationOn className="w-4 h-4 mr-2" />
