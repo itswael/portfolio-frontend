@@ -13,8 +13,8 @@
       ],
       "tech": ["React", "Node.js", "MongoDB", "Stripe"],
       "githubLink": "https://github.com/itswael/productservice_proxy",
-      "videoLink": "https://www.youtube.com/watch?v=demo1",
-      "liveLink": "https://ecommerce-demo.netlify.app",
+      "videoLink": "",
+      "liveLink": "",
       "screenshots": [
         "/screenshots/ecommerce-1.jpg",
         "/screenshots/ecommerce-2.jpg",
@@ -23,18 +23,18 @@
     },
     {
       "id": 2,
-      "title": "Task Management App",
-      "description": "Collaborative task management application with real-time updates and team collaboration features.",
+      "title": "Open Source: flickpicker",
+      "description": "Contributed to an open-source project, flickpicker, template for an application for Discord movie night that can be used for a voting system. So that users can vote on through Discord, possibly Titch, or through the app/website itself",
       "highlights": [
-        "Real-time updates using Socket.io for instant collaboration",
-        "Drag-and-drop functionality for intuitive task organization",
-        "Team management with role-based permissions",
-        "Analytics dashboard with project progress tracking"
+        "Implemented the backend using Express.js and json format database for efficient saving and retrieval of movies.",
+        "Integrated with in-browser caching for fast access to frequently used data.",
+        "Real-time vote count updates using optimistic UI updates and async backend updates.",
+        "Optimized performance by implementing pagination and lazy loading for large datasets."
       ],
-      "tech": ["React", "Socket.io", "Express", "PostgreSQL"],
-      "githubLink": "https://github.com/username/task-management",
-      "videoLink": "https://www.youtube.com/watch?v=demo2",
-      "liveLink": "https://taskmanager-demo.netlify.app",
+      "tech": ["React", "Express", "json in-memory database"],
+      "githubLink": "https://github.com/gbowne1/flickpicker",
+      "videoLink": "",
+      "liveLink": "",
       "screenshots": [
         "/screenshots/taskapp-1.jpg",
         "/screenshots/taskapp-2.jpg",
