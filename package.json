@@ -3,13 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://itswael.github.io/portfolio-frontend",
+  "homepage": "https://itswael.github.io/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:subdirectory": "vite build --base=/portfolio-frontend/",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build:subdirectory",
     "deploy": "gh-pages -d dist --dotfiles"
   },
   "dependencies": {
