@@ -3,10 +3,11 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import CodeIcon from "@mui/icons-material/Code";
 import photo from "../assets/photo.jpg"
+import { goToContact, handleResumeView } from '../utils/navigation';
 
 export default function About() {
     return (
-        <div className="min-h-screen bg-gray-50 py-20 px-4">
+        <div id="about" className="min-h-screen bg-gray-50 py-20 px-4">
             <div className="max-w-4xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
                     {/* Right Content - Profile Image and Info - Shows first on mobile */}
@@ -103,10 +104,16 @@ export default function About() {
                                 If you're looking for someone who blends backend expertise with a sharp eye for detail, a hunger to learn, and a bias for action — let's connect.
                             </p>
                             <div className="mt-4 flex gap-4">
-                                <button className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                                <button 
+                                    onClick={goToContact}
+                                    className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                                >
                                     Get In Touch
                                 </button>
-                                <button className="px-6 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors" >
+                                <button 
+                                    onClick={handleResumeView}
+                                    className="px-6 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors"
+                                >
                                     View Resume
                                 </button>
                             </div>
