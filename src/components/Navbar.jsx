@@ -1,43 +1,41 @@
 import { Disclosure, DisclosureButton, DisclosurePanel} from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from '../assets/logo.svg'
-import {useState} from 'react'
-
-const navigation = [
-    { name: 'Home', href: '#', current: true },
-    { name: 'About', href: '#', current: false },
-    { name: 'Work Experience', href: '#', current: false },
-    { name: 'Projects', href: '#', current: false },
-    { name: 'Skills', href: '#', current: false },
-    { name: 'Contact', href: '#', current: false },
-]
+import {useState, useEffect} from 'react'
+import { navigationItems, handleNavigation } from '../utils/navigation'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
 export default function Navbar() {
-    const [navigation, setNavigation] = useState([
-        { name: 'Home', href: '#', current: true },
-        { name: 'About', href: '#', current: false },
-        { name: 'Work Experience', href: '#', current: false },
-        { name: 'Projects', href: '#', current: false },
-        { name: 'Skills', href: '#', current: false },
-        { name: 'Contact', href: '#', current: false },
-    ])
+    const [currentNav, setCurrentNav] = useState('#hero');
 
-    function handleSelectTab(name) {
-        setNavigation(prevState =>
-            prevState.map(item => ({
-                ...item,
-                current: item.name === name,
-            }))
-        );
-    }
+    // Track scroll position to update active nav item
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = ['hero', 'about', 'work-experience', 'projects', 'skills', 'contact'];
+            const scrollPosition = window.scrollY + 150; // Offset for navbar height
 
-    //{SHADOW-MD}
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const section = document.getElementById(sections[i]);
+                if (section && section.offsetTop <= scrollPosition) {
+                    setCurrentNav(`#${sections[i]}`);
+                    break;
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const handleNavClick = (item) => {
+        handleNavigation(item.href, setCurrentNav);
+    };
+
     return (
-        <Disclosure as="nav" className="bg-gray-50 fixed top-0 left-0 w-full z-50">
+        <Disclosure as="nav" className="bg-gray-50 fixed top-0 left-0 w-full z-50 shadow-sm">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex max-h-22 items-center justify-between">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -51,24 +49,28 @@ export default function Navbar() {
                     </div>
                     <div className="flex flex-1 items-center justify-evenly">
                         <div className="flex shrink-0 items-center">
-                            <object data={logo} height={140} className={"py-8"} type="image/svg+xml">
-                            </object>
+                            <button 
+                                onClick={() => handleNavigation('#hero', setCurrentNav)}
+                                className="focus:outline-none hover:opacity-80 transition-opacity"
+                                aria-label="Go to top"
+                            >
+                                <object data={logo} height={140} className={"py-8"} type="image/svg+xml">
+                                </object>
+                            </button>
                         </div>
                         <div className="hidden sm:ml-6 sm:block left-2">
                             <div className="flex space-x-4">
-                                {navigation.map((item) => (
-                                    <a
+                                {navigationItems.map((item) => (
+                                    <button
                                         key={item.name}
-                                        href={item.href}
-                                        aria-current={item.current ? 'page' : undefined}
+                                        onClick={() => handleNavClick(item)}
                                         className={classNames(
-                                            item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                            'rounded-md px-3 py-2 text-sm font-medium',
+                                            currentNav === item.href ? 'bg-gray-900 text-white' : 'text-gray-600 hover:bg-gray-700 hover:text-white',
+                                            'rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200',
                                         )}
-                                        onClick={() => handleSelectTab(item.name)}
                                     >
                                         {item.name}
-                                    </a>
+                                    </button>
                                 ))}
                             </div>
                         </div>
@@ -78,15 +80,14 @@ export default function Navbar() {
 
             <DisclosurePanel className="sm:hidden">
                 <div className="space-y-1 px-2 pt-2 pb-3">
-                    {navigation.map((item) => (
+                    {navigationItems.map((item) => (
                         <DisclosureButton
                             key={item.name}
-                            as="a"
-                            href={item.href}
-                            aria-current={item.current ? 'page' : undefined}
+                            as="button"
+                            onClick={() => handleNavClick(item)}
                             className={classNames(
-                                item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                'block rounded-md px-3 py-2 text-base font-medium',
+                                currentNav === item.href ? 'bg-gray-900 text-white' : 'text-gray-600 hover:bg-gray-700 hover:text-white',
+                                'block rounded-md px-3 py-2 text-base font-medium w-full text-left transition-colors duration-200',
                             )}
                         >
                             {item.name}
