@@ -1,0 +1,26 @@
+{
+  "resume": {
+    "url": "https://drive.google.com/file/d/1gWPSzemkAuiXx7-sVoISZuWqhm88-trc/view",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1gWPSzemkAuiXx7-sVoISZuWqhm88-trc",
+    "filename": "Mohammad_Wael_Resume.pdf",
+    "description": "Software Engineer Resume - Mohammad Wael",
+    "lastUpdated": "2025-07-05",
+    "instructions": {
+      "setup": [
+        "1. Upload your resume to Google Drive, Dropbox, or any cloud storage",
+        "2. Get the shareable link (make sure it's publicly accessible)",
+        "3. Replace the 'url' field above with your actual resume link",
+        "4. For Google Drive: Use format 'https://drive.google.com/file/d/FILE_ID/view'",
+        "5. For direct download: Use format 'https://drive.google.com/uc?export=download&id=FILE_ID'",
+        "6. Update the filename to match your actual resume filename"
+      ],
+      "alternatives": [
+        "You can also host your resume on:",
+        "- GitHub Pages (as a PDF file)",
+        "- Netlify/Vercel static hosting",
+        "- Your own domain",
+        "- LinkedIn profile (though less ideal for viewing)"
+      ]
+    }
+  }
+}
