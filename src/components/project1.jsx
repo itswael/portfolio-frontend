@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Card, CardContent, Typography, Dialog, DialogContent, IconButton, Chip } from '@mui/material';
-import { GitHub, PlayArrow, Launch, Close, ArrowBackIos, ArrowForwardIos } from '@mui/icons-material';
+import { Card, CardContent, Typography, Dialog, DialogContent, IconButton, Chip, Button } from '@mui/material';
+import { GitHub, PlayArrow, Launch, Close, ArrowBackIos, ArrowForwardIos, OpenInNew } from '@mui/icons-material';
 import projectsData from '../data/projectsData.json';
+import { getEmbeddableVideoUrl, isDirectVideoFile, getVideoPlatform, getFallbackVideoLink } from '../utils/videoUtils';
 
 const StackingCards = () => {
     const [cards] = useState(projectsData.projects);
@@ -37,13 +38,19 @@ const StackingCards = () => {
 
     // Handler functions
     const handleVideoOpen = (videoUrl) => {
-        setCurrentVideoUrl(videoUrl);
+        const embeddableUrl = getEmbeddableVideoUrl(videoUrl);
+        setCurrentVideoUrl(embeddableUrl);
         setVideoModalOpen(true);
     };
 
     const handleVideoClose = () => {
         setVideoModalOpen(false);
         setCurrentVideoUrl('');
+    };
+
+    const handleVideoFallback = (originalUrl) => {
+        const fallbackUrl = getFallbackVideoLink(originalUrl);
+        window.open(fallbackUrl, '_blank', 'noopener,noreferrer');
     };
 
     const handleScreenshotNavigation = (direction, screenshots) => {
@@ -81,7 +88,7 @@ const StackingCards = () => {
     );
 
     return (
-        <div ref={containerRef} className="relative">
+        <div id="projects" ref={containerRef} className="relative">
             {/* Section Title */}
             <div className="text-center  bg-gray-50">
                 <h2 className="text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
@@ -96,10 +103,10 @@ const StackingCards = () => {
                 {cards.map((card, index) => (
                     <div
                         key={card.id}
-                        className="w-3/4 mx-auto" // 50% of viewport width, centered
+                        className="w-4/5 mx-auto" // 50% of viewport width, centered
                         style={{
                             position: 'sticky',
-                            top: `${140}px`, // Start below navbar (220px) + stacking offset
+                            top: `${130}px`, // Start below navbar (220px) + stacking offset
                             zIndex: 40 + index, // Decreasing z-index for proper stacking (navbar is z-50)
                             marginTop: index === 0 ? '50px' : '30px', // Space from top for first card
                         }}
@@ -113,7 +120,7 @@ const StackingCards = () => {
                                 transformOrigin: 'center top',
                                 transition: 'all 0.3s ease',
                                 border: '1px solid rgba(0,0,0,0.1)',
-                                minHeight: '75vh'
+                                minHeight: '70vh'
                             }}
                             className="hover:shadow-xl transition-shadow duration-300"
                         >
@@ -144,9 +151,9 @@ const StackingCards = () => {
                                 </div>
 
                                 {/* Two Column Layout */}
-                                <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                                <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
                                     {/* Left Column - 40% (2/5) */}
-                                    <div className="lg:col-span-2">
+                                    <div className="lg:col-span-3">
                                         {/* Description */}
                                         <Typography
                                             paragraph
@@ -174,24 +181,24 @@ const StackingCards = () => {
 
                                         {/* Action Buttons */}
                                         <div className="flex justify-center items-center mt-8">
-                                            <ActionButton
+                                            {card.githubLink && <ActionButton
                                                 icon={<GitHub />}
                                                 onClick={() => window.open(card.githubLink, '_blank')}
                                                 color="primary"
                                                 tooltip="View GitHub Repository"
-                                            />
-                                            <ActionButton
+                                            />}
+                                            {card.videoLink && <ActionButton
                                                 icon={<PlayArrow />}
                                                 onClick={() => handleVideoOpen(card.videoLink)}
                                                 color="secondary"
                                                 tooltip="Watch Demo Video"
-                                            />
-                                            <ActionButton
+                                            />}
+                                            {card.liveLink && <ActionButton
                                                 icon={<Launch />}
                                                 onClick={() => window.open(card.liveLink, '_blank')}
                                                 color="tertiary"
                                                 tooltip="View Live Site"
-                                            />
+                                            />}
                                         </div>
                                     </div>
 
@@ -311,14 +318,52 @@ const StackingCards = () => {
                     >
                         <Close />
                     </IconButton>
-                    <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-                        <iframe
-                            src={currentVideoUrl?.replace('watch?v=', 'embed/')}
-                            title="Project Demo Video"
-                            frameBorder="0"
-                            allowFullScreen
-                            className="absolute top-0 left-0 w-full h-full rounded-lg"
-                        />
+                    
+                    <div className="relative w-full bg-black rounded-lg overflow-hidden" style={{ paddingBottom: '56.25%' }}>
+                        {isDirectVideoFile(currentVideoUrl) ? (
+                            <video
+                                controls
+                                autoPlay
+                                className="absolute top-0 left-0 w-full h-full"
+                                onError={() => {
+                                    console.error('Video failed to load');
+                                }}
+                            >
+                                <source src={currentVideoUrl} type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        ) : (
+                            <iframe
+                                src={currentVideoUrl}
+                                title="Project Demo Video"
+                                frameBorder="0"
+                                allowFullScreen
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                className="absolute top-0 left-0 w-full h-full"
+                                onError={() => {
+                                    console.error('Iframe failed to load');
+                                }}
+                            />
+                        )}
+                        
+                        {/* Fallback button overlay */}
+                        <div className="absolute bottom-4 right-4">
+                            <Button
+                                variant="contained"
+                                size="small"
+                                startIcon={<OpenInNew />}
+                                onClick={() => handleVideoFallback(currentVideoUrl)}
+                                sx={{
+                                    backgroundColor: 'rgba(0,0,0,0.7)',
+                                    color: 'white',
+                                    '&:hover': {
+                                        backgroundColor: 'rgba(0,0,0,0.9)'
+                                    }
+                                }}
+                            >
+                                Open in new tab
+                            </Button>
+                        </div>
                     </div>
                 </DialogContent>
             </Dialog>
