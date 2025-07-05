@@ -3,15 +3,16 @@
     {
       "id": 1,
       "title": "E-commerce Backend",
-      "description": "Built a full-stack e-commerce platform with comprehensive features for modern online shopping.",
+      "description": "Design and developed a scalable backend supporting fast product search, secure transactions, and seamless payment processing for an e-commerce platform, with Spring Boot, Lombok, JPA, Spring Security, MySQL.",
       "highlights": [
-        "Secure user authentication and authorization system",
-        "Integrated Stripe payment processing with order tracking",
-        "Real-time inventory management with automated alerts",
-        "RESTful API design with comprehensive documentation"
+        "Designed and built a microservices-based REST API backend following test-driven development (TDD).",
+        "Enhanced product search with OpenSearch ElasticSearch and improved performance via AWS Redis cache. ",
+        "Implemented secure access with Bcrypt encryption, role-based access, JWT for session management, and Oauth2 authentication.",
+        "Integrated Razorpay and Stripe payment gateways exercising the Strategy pattern with webhooks.",
+        "Deployed on AWS Elastic Beanstalk with AWS RDS and ensured reliability through robust logging and monitoring."
       ],
       "tech": ["React", "Node.js", "MongoDB", "Stripe"],
-      "githubLink": "https://github.com/username/ecommerce-backend",
+      "githubLink": "https://github.com/itswael/productservice_proxy",
       "videoLink": "https://www.youtube.com/watch?v=demo1",
       "liveLink": "https://ecommerce-demo.netlify.app",
       "screenshots": [
@@ -43,17 +44,17 @@
     {
       "id": 3,
       "title": "Movie Revenue Prediction",
-      "description": "Machine learning project that forecasts movie box office earnings using advanced analytics.",
+      "description": "A machine learning project that forecasts a movie’s box office earnings, leveraging metadata (budget, cast, genre), audience sentiment (reviews, social media trends) backed by CRISP-DM methodology.",
       "highlights": [
-        "Predictive modeling using Random Forest and XGBoost algorithms",
-        "Sentiment analysis from reviews and social media trends",
-        "Comprehensive data pipeline following CRISP-DM methodology",
-        "Interactive dashboard for exploring prediction insights"
+        "Integrating data from IMDb, TMDb, Box Office Mojo, and social platforms to generate insights for studios and investors. ",
+        "Utilizing NLP-based script analysis to identify key revenue predictors from movie dialogues and descriptions.",
+        "Implementing models like Random Forest, XGBoost, and deep learning to improve prediction accuracy.",
+        "Interactive dashboard for exploring prediction insights using streamlit"
       ],
       "tech": ["Random Forest", "XGBoost", "Deep Learning", "Python", "FastAPI"],
-      "githubLink": "https://github.com/username/movie-prediction",
-      "videoLink": "https://www.youtube.com/watch?v=demo3",
-      "liveLink": "https://movie-prediction-demo.herokuapp.com",
+      "githubLink": "https://github.com/itswael/cap5771sp25-project",
+      "videoLink": "https://drive.google.com/file/d/1TcVHPMGlWXuf8tRgKJTVE-B5t6e17L4-/view",
+      "liveLink": "https://filmfortune.streamlit.app/",
       "screenshots": [
         "/screenshots/movie-1.jpg",
         "/screenshots/movie-2.jpg",
@@ -63,16 +64,17 @@
     {
       "id": 4,
       "title": "GatorCan",
-      "description": "Full-stack educational platform for seamless course management and collaboration.",
+      "description": "Full-stack scalable educational platform enabling seamless course management, assignment submissions, and real-time collaboration for students and instructors, in Golang (gin), React.js, and SQLite. ",
       "highlights": [
-        "Course management system with assignment submissions",
-        "Real-time collaboration tools for students and instructors",
-        "Scalable architecture built with Golang and React.js",
-        "Cloud deployment with AWS for high availability"
+        "Designed and built a robust backend with Golang, ensuring efficient user management and course enrollment workflows.",
+        "Implemented a structured weekly schedule view and streamlined assignment submissions with AWS S3 storage.",
+        "Developed real-time messaging channels for student-instructor and peer discussions within courses.",
+        "Integrated AWS ECS for backend deployment and explored AWS RDS as a scalable database solution.",
+        "Developed and integrated AI/NLP-based features for personalized course recommendations and notes summarization."
       ],
       "tech": ["React.js", "Golang", "SQLite3", "AWS"],
-      "githubLink": "https://github.com/username/gatorcan",
-      "videoLink": "https://www.youtube.com/watch?v=demo4",
+      "githubLink": "https://github.com/itswael/GatorCan",
+      "videoLink": "https://drive.google.com/file/d/1LywboJhJ_LxYwHm6a4FTGKUGW-ZBsTMz/view",
       "liveLink": "https://gatorcan-demo.herokuapp.com",
       "screenshots": [
         "/screenshots/gatorcan-1.jpg",
