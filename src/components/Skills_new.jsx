@@ -175,7 +175,7 @@ const Skills = () => {
     );
 
     return (
-        <div className="min-h-screen bg-gray-50 py-16">
+        <div id="skills" className="min-h-screen bg-gray-50 py-16">
             <Container maxWidth="xl" className="px-4">
                 {/* Header */}
                 <div className="mb-16" style={{ textAlign: 'center' }}>
