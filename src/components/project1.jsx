@@ -1,42 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Card, CardContent, Typography } from '@mui/material';
+import projectsData from '../data/projectsData.json'
 
 const StackingCards = () => {
-    const [cards] = useState([ // Removed auto-scroll card generation for clarity
-        {
-            id: 1,
-            title: "Project 1: E-commerce Platform",
-            content: "Built a full-stack e-commerce platform using React, Node.js, and MongoDB. Features include user authentication, payment processing, and inventory management.",
-            linkText: "View on GitHub",
-            buttonText: "GitHub Repository",
-            tech: ["React", "Node.js", "MongoDB", "Stripe"]
-        },
-        {
-            id: 2,
-            title: "Project 2: Task Management App",
-            content: "Developed a collaborative task management application with real-time updates using Socket.io. Includes drag-and-drop functionality and team collaboration features.",
-            linkText: "Live Demo Available",
-            buttonText: "View Demo",
-            tech: ["React", "Socket.io", "Express", "PostgreSQL"]
-        },
-        {
-            id: 3,
-            title: "Project 3: Data Visualization Dashboard",
-            content: "Created an interactive dashboard for business analytics using D3.js and React. Features dynamic charts, filters, and real-time data updates.",
-            linkText: "Case Study Available",
-            buttonText: "Read Case Study",
-            tech: ["React", "D3.js", "Python", "FastAPI"]
-        },
-        {
-            id: 4,
-            title: "Project 4: Mobile App Development",
-            content: "Built a cross-platform mobile application using React Native. Features include offline capability, push notifications, and GPS integration.",
-            linkText: "App Store Link",
-            buttonText: "Download App",
-            tech: ["React Native", "Firebase", "Redux", "Maps API"]
-        }
-    ]);
+    const [cards] = useState(projectsData.projects);
 
     const containerRef = useRef(null);
     const [isInView, setIsInView] = useState(false);
