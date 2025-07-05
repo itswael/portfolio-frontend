@@ -2,37 +2,83 @@
   "projects": [
     {
       "id": 1,
-      "title": "Project 1: E-commerce Backend",
-      "content": "Built a full-stack e-commerce platform using React, Node.js, and MongoDB. Features include user authentication, payment processing, and inventory management.",
-      "linkText": "View on GitHub",
-      "buttonText": "GitHub Repository",
-      "tech": ["React", "Node.js", "MongoDB", "Stripe"]
+      "title": "E-commerce Backend",
+      "description": "Built a full-stack e-commerce platform with comprehensive features for modern online shopping.",
+      "highlights": [
+        "Secure user authentication and authorization system",
+        "Integrated Stripe payment processing with order tracking",
+        "Real-time inventory management with automated alerts",
+        "RESTful API design with comprehensive documentation"
+      ],
+      "tech": ["React", "Node.js", "MongoDB", "Stripe"],
+      "githubLink": "https://github.com/username/ecommerce-backend",
+      "videoLink": "https://www.youtube.com/watch?v=demo1",
+      "liveLink": "https://ecommerce-demo.netlify.app",
+      "screenshots": [
+        "/screenshots/ecommerce-1.jpg",
+        "/screenshots/ecommerce-2.jpg",
+        "/screenshots/ecommerce-3.jpg"
+      ]
     },
     {
       "id": 2,
-      "title": "Project 2: Task Management App",
-      "content": "Developed a collaborative task management application with real-time updates using Socket.io. Includes drag-and-drop functionality and team collaboration features.",
-      "linkText": "Live Demo Available",
-      "buttonText": "View Demo",
-      "tech": ["React", "Socket.io", "Express", "PostgreSQL"]
+      "title": "Task Management App",
+      "description": "Collaborative task management application with real-time updates and team collaboration features.",
+      "highlights": [
+        "Real-time updates using Socket.io for instant collaboration",
+        "Drag-and-drop functionality for intuitive task organization",
+        "Team management with role-based permissions",
+        "Analytics dashboard with project progress tracking"
+      ],
+      "tech": ["React", "Socket.io", "Express", "PostgreSQL"],
+      "githubLink": "https://github.com/username/task-management",
+      "videoLink": "https://www.youtube.com/watch?v=demo2",
+      "liveLink": "https://taskmanager-demo.netlify.app",
+      "screenshots": [
+        "/screenshots/taskapp-1.jpg",
+        "/screenshots/taskapp-2.jpg",
+        "/screenshots/taskapp-3.jpg"
+      ]
     },
     {
       "id": 3,
-      "title": "Project 3: Movie Revenue Prediction",
-      "content": "A machine learning project that forecasts a movie’s box office earnings, leveraging metadata (budget, cast, \ngenre), audience sentiment (reviews, social media trends) backed by CRISP-DM methodology. ",
-      "linkText": "Case Study Available",
-      "buttonText": "Read Case Study",
-      "tech": ["Random Forest", "XGBoost", "Deep learning", "Python", "FastAPI"]
+      "title": "Movie Revenue Prediction",
+      "description": "Machine learning project that forecasts movie box office earnings using advanced analytics.",
+      "highlights": [
+        "Predictive modeling using Random Forest and XGBoost algorithms",
+        "Sentiment analysis from reviews and social media trends",
+        "Comprehensive data pipeline following CRISP-DM methodology",
+        "Interactive dashboard for exploring prediction insights"
+      ],
+      "tech": ["Random Forest", "XGBoost", "Deep Learning", "Python", "FastAPI"],
+      "githubLink": "https://github.com/username/movie-prediction",
+      "videoLink": "https://www.youtube.com/watch?v=demo3",
+      "liveLink": "https://movie-prediction-demo.herokuapp.com",
+      "screenshots": [
+        "/screenshots/movie-1.jpg",
+        "/screenshots/movie-2.jpg",
+        "/screenshots/movie-3.jpg"
+      ]
     },
     {
       "id": 4,
-      "title": "Project 4: GatorCan",
-      "content": "Developed a full-stack scalable educational platform enabling seamless course management, assignment submissions, and real-time collaboration for students and instructors, in Golang (gin), React.js, and SQLite.",
-      "linkText": "App Store Link",
-      "buttonText": "Download App",
-      "githubLink": "github url what else it could be",
-      "demoLink": "demoLink offcourse",
-      "tech": ["React.js", "golang", "SQLite3", "AWS"]
+      "title": "GatorCan",
+      "description": "Full-stack educational platform for seamless course management and collaboration.",
+      "highlights": [
+        "Course management system with assignment submissions",
+        "Real-time collaboration tools for students and instructors",
+        "Scalable architecture built with Golang and React.js",
+        "Cloud deployment with AWS for high availability"
+      ],
+      "tech": ["React.js", "Golang", "SQLite3", "AWS"],
+      "githubLink": "https://github.com/username/gatorcan",
+      "videoLink": "https://www.youtube.com/watch?v=demo4",
+      "liveLink": "https://gatorcan-demo.herokuapp.com",
+      "screenshots": [
+        "/screenshots/gatorcan-1.jpg",
+        "/screenshots/gatorcan-2.jpg",
+        "/screenshots/gatorcan-3.jpg"
+      ]
     }
   ]
 }
