@@ -12,9 +12,9 @@
       "GPA": "4.0",
       "description": "Focused on Mathematics, Artificial Intelligence, Machine Learning, Data Science and Algorithms with emphasis on problem-solving and analytical thinking.",
       "achievements": [
-        "Achieved 92% in Computer Science",
-        "Participated in National Science Olympiad",
-        "Developed first mobile application during senior year"
+        "Maintaining a First Class Honours (GPA: 4.0/4.0).",
+        "Designed and built GatorCan, a Full-stack educational platform for seamless course management and collaboration.",
+        "Developed an Object Oriented version of Pascal Programming language"
       ],
       "technologies": ["Mathematics", "Artificial Intelligence", "Machine Learning", "Data Science", "Go lang", "React.js"],
       "icon": "📚"
@@ -28,11 +28,9 @@
       "startDate": "Jan 2023",
       "endDate": "Aug 2024",
       "duration": "1.6 years",
-      "description": "Founded BlinkFind to develop One platform for AI-powered productivity, business automation and daily life solutions.",
+      "description": "",
       "achievements": [
-        "Our 1st product QuickFind App is your ultimate solution for lost and found items.",
-        "Built scalable AI-powered solutions serving 1000+ users",
-        "Implemented modern tech stack with React, Node.js, and AI integration"
+        ""
       ],
       "technologies": ["AI/ML", "Java", "Spring Boot", "Flask", "MS SQL", "AWS"],
       "icon": "🚀"
@@ -46,11 +44,12 @@
       "startDate": "Apr 2021",
       "endDate": "Jan 2023",
       "duration": "1.7 years",
-      "description": "Founded BlinkFind to develop One platform for AI-powered productivity, business automation and daily life solutions.",
+      "description": "Engineered a chatbot and automation suite using Power Automate, Flask, and Python, reducing downtime by 10% and saving 800+ hours annually through cross-platform task automation. Enhanced system performance by 93% via multithreaded DB optimization and secured access with a custom Dataverse-based authorization framework, cutting admin overhead by 20%.",
       "achievements": [
-        "Our 1st product QuickFind App is your ultimate solution for lost and found items.",
-        "Built scalable AI-powered solutions serving 1000+ users",
-        "Implemented modern tech stack with React, Node.js, and AI integration"
+        "Developed and deployed a chatbot solution leveraging Power Automate (PVA) and Flask REST API to automate key processes acrossmultiple applications, resulting in a 10% reduction in downtime.",
+        "Automated repetitive tasks across mainframes, Windows, web applications, and databases using Python and Shell scripting,saving 800+ hours of manual effort annually and improving team productivity by 20%. This allowed teams to focus on higher-valuetasks, driving better business outcomes",
+        "Built a custom authorization mechanism with Dataverse and Python to manage secure, role-based access across applications,ensuring compliance and reducing risks associated with unauthorized access. Resulting in smooth user access management, reducingadministrative overhead by 20%.",
+        "Optimized database operations by implementing multithreading techniques, improving application performance and optimizingprocessing times by 93% (from 240 sec. to 16 sec.). This enhanced efficiency and reliability for critical business processes."
       ],
       "technologies": ["Microsoft Power Automate", "RPA", "Blueprism", "AI/ML", "MS SQL", "Oracle Db", "Dataverse"],
       "icon": "🚀"
@@ -64,11 +63,11 @@
       "startDate": "Oct 2020",
       "endDate": "Apr 2021",
       "duration": "6 months",
-      "description": "Founded BlinkFind to develop One platform for AI-powered productivity, business automation and daily life solutions.",
+      "description": "Built a secure, real-time order tracking portal that reduced response time by 90%, automated 3 key workflows, and saved 720+ hours annually while cutting support tickets by 40%.",
       "achievements": [
-        "Our 1st product QuickFind App is your ultimate solution for lost and found items.",
-        "Built scalable AI-powered solutions serving 1000+ users",
-        "Implemented modern tech stack with React, Node.js, and AI integration"
+        "Designed and developed a web-based order tracking portal using HTML, CSS, JavaScript, Node.js, and MS SQL to enable real-timeorder status tracking, reducing response time by 90% and saving 500 hours annually by eliminating manual ticket inquiries.",
+        "Integrated role-based authorization and security groups to ensure secure login and compliance, minimizing related incidents by30%. Implemented robust error handling and logging, improving reliability and shrinking downtime by 15%.",
+        "Optimized the order tracking process by automating manual workflows, decoupling dependency on support tickets by 40%, andimproving overall operational efficiency for end-users, saving 200 hours annually in manual effort."
       ],
       "technologies": ["React.js", "Node.js", "Express.js", "MS SQL"],
       "icon": "🚀"
@@ -85,10 +84,12 @@
       "description": "Comprehensive study of computer science fundamentals, software engineering, and modern programming paradigms.",
       "achievements": [
         "Graduated with First Class Honours (CGPA: 8.7/10)",
-        "Led multiple project teams and hackathon participations",
-        "Specialized in AI/ML and Mobile Application Development"
+        "Designed and built apniPharmacy, a platform to collect and provide unused medicines to NGOs which then reaches to the people in need",
+        "Lead a team of 5 to organize drones designing and building workshop with IIT Kanpur startup “Pi Drones”, which was first of its kind, in the campus.",
+        "Lead a team of 10 to organize Codezilla, an inter-college coding hackathon.",
+        "Led a team of 20 volunteers to organize hospitality services for over 600+ attendees during the Universal Human Values and Professional Ethics Conference."
       ],
-      "technologies": ["Java", "Python", "C++", "DSA","Operating System","Computer Networks", "Database Systems", "Web Development"],
+      "technologies": ["Java", "Android Studio", "Firebase", "DSA","Operating System","Computer Networks", "Database Systems", "Web Development"],
       "icon": "🎓"
     }
   ]
