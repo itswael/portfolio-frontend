@@ -1,0 +1,54 @@
+{
+  "contact": {
+    "email": "m.mohammadwael@ufl.edu",
+    "phone": "+1 (352) 709 94 05",
+    "location": "Florida, USA",
+    "workingHours": "8 a.m. – 11 p.m.",
+    "formSubmissionEmail": "m.mohammadwael@ufl.edu",
+    "social": {
+      "linkedin": "https://linkedin.com/in/yourprofile",
+      "github": "https://github.com/itswael",
+      "twitter": "https://twitter.com/yourhandle"
+    }
+  },
+  "ui": {
+    "headings": {
+      "main": "Send a Hi",
+      "description": "Feel free to contact me if having any questions. I'm available for new projects or just for chatting.",
+      "formTitle": "Email *"
+    },
+    "labels": {
+      "email": "Email",
+      "phone": "Phone", 
+      "address": "Address",
+      "workingHours": "Working hours",
+      "name": "Name",
+      "message": "Message *"
+    },
+    "placeholders": {
+      "email": "your@email.com",
+      "name": "Timon",
+      "message": "Let's connect for ..."
+    },
+    "buttons": {
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "success": "Message sent!",
+      "error": "Try again"
+    },
+    "messages": {
+      "success": "Thank you for your message! I'll get back to you soon.",
+      "error": "Failed to send message. Please try again.",
+      "networkError": "Network error. Please check your connection.",
+      "validationError": "Please fill in all required fields correctly."
+    },
+    "validation": {
+      "emailRequired": "Email address is required",
+      "emailInvalid": "Please enter a valid email address",
+      "nameRequired": "Name is required",
+      "nameMinLength": "Name must be at least 2 characters",
+      "messageRequired": "Message is required",
+      "messageMinLength": "Message must be at least 10 characters"
+    }
+  }
+}
