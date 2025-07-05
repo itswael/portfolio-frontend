@@ -27,7 +27,7 @@ jobs:
       - name: Deploy to GitHub Pages Repo
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GH_DEPLOY_TOKEN }}
+          personal_token: ${{ secrets.GH_DEPLOY_TOKEN }}
           publish_dir: ./dist
           publish_branch: main  # branch in your `itswael.github.io` repo
           external_repository: itswael/itswael.github.io
