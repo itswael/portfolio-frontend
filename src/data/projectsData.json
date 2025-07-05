@@ -16,9 +16,7 @@
       "videoLink": "",
       "liveLink": "",
       "screenshots": [
-        "/screenshots/ecommerce-1.jpg",
-        "/screenshots/ecommerce-2.jpg",
-        "/screenshots/ecommerce-3.jpg"
+        "/screenshots/movie-2.jpg"
       ]
     },
     {
@@ -36,9 +34,7 @@
       "videoLink": "",
       "liveLink": "",
       "screenshots": [
-        "/screenshots/taskapp-1.jpg",
-        "/screenshots/taskapp-2.jpg",
-        "/screenshots/taskapp-3.jpg"
+        "/screenshots/movie-2.jpg"
       ]
     },
     {
@@ -77,9 +73,7 @@
       "videoLink": "https://drive.google.com/file/d/1LywboJhJ_LxYwHm6a4FTGKUGW-ZBsTMz/view",
       "liveLink": "https://gatorcan-demo.herokuapp.com",
       "screenshots": [
-        "/screenshots/gatorcan-1.jpg",
-        "/screenshots/gatorcan-2.jpg",
-        "/screenshots/gatorcan-3.jpg"
+        "/screenshots/movie-2.jpg"
       ]
     }
   ]
