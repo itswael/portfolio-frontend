@@ -18,9 +18,10 @@ const App = () => {
             <Navbar/>
             <HeroPage/>
             <About/>
-            <Skills/>
             <WorkEx/>
             <Projects/>
+            <Skills/>
+
             {/* Main content wrapper with top padding to account for fixed navbar
             <main className="pt-52"> {/* pt-52 = 208px, adjust based on your navbar height */}
                 <Contact/>
