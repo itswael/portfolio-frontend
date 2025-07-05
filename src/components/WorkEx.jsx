@@ -36,7 +36,7 @@ const WorkEx = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 py-16">
+        <div id="work-experience" className="min-h-screen bg-gray-50 py-16">
             <Container maxWidth="lg">
                 {/* Header Section */}
                 <div className="mb-16" style={{ textAlign: 'center' }}>
