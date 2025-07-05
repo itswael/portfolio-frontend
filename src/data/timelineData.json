@@ -28,11 +28,13 @@
       "startDate": "Jan 2023",
       "endDate": "Aug 2024",
       "duration": "1.6 years",
-      "description": "",
+      "description": "Optimized processing of 1000s of records from vendors using divide and conquer approach. Designed and build a secure automated password vault for service ids to update and sync new password based on set frequency.",
       "achievements": [
-        ""
+        "Designed and built secure password vault for service ids",
+        "Storing them in config and which took 100s of hours for password updation, it now gets updated in one place that too automatically based on expiry timer, servers than cache the password using ttl approach.",
+        "built a microservice to process 1000s of records received from the vendors in xml format, by breaking single file into chunks and processing them parallely to reduce the downtime"
       ],
-      "technologies": ["AI/ML", "Java", "Spring Boot", "Flask", "MS SQL", "AWS"],
+      "technologies": ["Python", "Java", "Spring Boot", "Flask", "MS SQL", "XML"],
       "icon": "🚀"
     },
     {
@@ -75,12 +77,13 @@
     {
       "id": 5,
       "type": "education",
-      "title": "Bachelor of Technology",
+      "title": "Bachelor of Technology in Computer Science and Engineering",
       "company": "Dr. A. P. J. Abdul Kalam Technical University",
       "location": "Uttar Pradesh, India",
       "startDate": "2016",
       "endDate": "2020",
       "duration": "4 years",
+      "GPA": 8.73,
       "description": "Comprehensive study of computer science fundamentals, software engineering, and modern programming paradigms.",
       "achievements": [
         "Graduated with First Class Honours (CGPA: 8.7/10)",
