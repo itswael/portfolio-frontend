@@ -2,6 +2,7 @@ import React from 'react';
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import CodeIcon from "@mui/icons-material/Code";
+import photo from "../assets/photo.jpg"
 
 export default function About() {
     return (
@@ -13,17 +14,15 @@ export default function About() {
                         <div className="lg:sticky lg:top-32">
                             {/* Profile Image */}
                             <div className="mb-6">
-                                <div className="w-48 h-48 mx-auto rounded-full bg-gray-300 overflow-hidden shadow-lg">
+                                <div className="w-52 h-52 mx-auto rounded-full bg-gray-300 overflow-hidden shadow-lg">
                                     {/* Placeholder for profile image */}
-                                    <div className="w-full h-full bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center">
-                                        <span className="text-white text-4xl font-bold">YI</span>
-                                    </div>
+
                                     {/* Uncomment and replace with your actual image */}
-                                    {/* <img 
-                                        src="/path-to-your-profile-image.jpg" 
+                                    { <img
+                                        src={photo}
                                         alt="Profile" 
                                         className="w-full h-full object-cover"
-                                    /> */}
+                                    /> }
                                 </div>
                             </div>
 
@@ -107,7 +106,7 @@ export default function About() {
                                 <button className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
                                     Get In Touch
                                 </button>
-                                <button className="px-6 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors">
+                                <button className="px-6 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors" >
                                     View Resume
                                 </button>
                             </div>
