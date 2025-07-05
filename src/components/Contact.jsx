@@ -89,7 +89,7 @@ const Contact = () => {
 
     const { contact, ui } = contactConfig;
     return (
-        <div className="max-w-4xl h-160 mx-auto pt-10 pb-40">
+        <div id="contact" className="max-w-4xl h-160 mx-auto pt-10 pb-40">
             {/* Header Section */}
             <div className="mb-8">
                 <h1 className="text-3xl font-bold mb-2">{ui.headings.main}</h1>
