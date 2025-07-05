@@ -92,8 +92,19 @@ const TimelineItem = ({ item, index, isLast }) => {
                                         fontWeight: 500
                                     }}
                                 >
-                                    {item.company}
+                                    {item.company + " "}
+                                    { item.GPA && <Chip
+                                        label={"GPA "+item.GPA}
+                                        size="small"
+                                        sx={{
+                                            backgroundColor: `${getTypeColor(item.type)}15`,
+                                            color: getTypeColor(item.type),
+                                            fontWeight: 'bold',
+                                            border: `1px solid ${getTypeColor(item.type)}30`
+                                        }}
+                                    />}
                                 </Typography>
+
                             </div>
                             <IconButton 
                                 className="text-gray-500 hover:text-gray-700 transition-colors duration-200"
