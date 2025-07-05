@@ -1,7 +1,38 @@
 {
   "projects": [
     {
-      "id": 1
+      "id": 1,
+      "title": "Project 1: E-commerce Backend",
+      "content": "Built a full-stack e-commerce platform using React, Node.js, and MongoDB. Features include user authentication, payment processing, and inventory management.",
+      "linkText": "View on GitHub",
+      "buttonText": "GitHub Repository",
+      "tech": ["React", "Node.js", "MongoDB", "Stripe"]
+    },
+    {
+      "id": 2,
+      "title": "Project 2: Task Management App",
+      "content": "Developed a collaborative task management application with real-time updates using Socket.io. Includes drag-and-drop functionality and team collaboration features.",
+      "linkText": "Live Demo Available",
+      "buttonText": "View Demo",
+      "tech": ["React", "Socket.io", "Express", "PostgreSQL"]
+    },
+    {
+      "id": 3,
+      "title": "Project 3: Movie Revenue Prediction",
+      "content": "A machine learning project that forecasts a movie’s box office earnings, leveraging metadata (budget, cast, \ngenre), audience sentiment (reviews, social media trends) backed by CRISP-DM methodology. ",
+      "linkText": "Case Study Available",
+      "buttonText": "Read Case Study",
+      "tech": ["Random Forest", "XGBoost", "Deep learning", "Python", "FastAPI"]
+    },
+    {
+      "id": 4,
+      "title": "Project 4: GatorCan",
+      "content": "Developed a full-stack scalable educational platform enabling seamless course management, assignment submissions, and real-time collaboration for students and instructors, in Golang (gin), React.js, and SQLite.",
+      "linkText": "App Store Link",
+      "buttonText": "Download App",
+      "githubLink": "github url what else it could be",
+      "demoLink": "demoLink offcourse",
+      "tech": ["React.js", "golang", "SQLite3", "AWS"]
     }
   ]
 }
