@@ -96,7 +96,7 @@ export const componentStyles = {
 
   // Layout
   layout: {
-    section: `py-16 md:py-20 px-4`,
+    section: `py-8 md:py-10 px-4`,
     sectionBg: `bg-gray-50`,
     container: `max-w-6xl mx-auto`,
     containerSmall: `max-w-4xl mx-auto`,

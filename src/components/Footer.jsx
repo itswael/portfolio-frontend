@@ -4,7 +4,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import CodeIcon from '@mui/icons-material/Code';
 const Footer = () => {
     return (
-        <footer className="bg-gray-100 py-6 px-4 border-t border-gray-200">
+        <footer className="bg-gray-50 py-6 px-4 border-t border-gray-200">
             <div className="container mx-auto flex flex-col md:flex-row justify-around items-center">
                 {/* Copyright text */}
                 <div className="text-gray-600 mb-4 md:mb-0">

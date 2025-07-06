@@ -11,6 +11,7 @@ const StackingCards = () => {
     const [currentVideoUrl, setCurrentVideoUrl] = useState('');
     const [currentScreenshots, setCurrentScreenshots] = useState([]);
     const [currentScreenshotIndex, setCurrentScreenshotIndex] = useState(0);
+    const [hoveredCardId, setHoveredCardId] = useState(null);
 
     const containerRef = useRef(null);
     const [isInView, setIsInView] = useState(false);
@@ -108,7 +109,8 @@ const StackingCards = () => {
     };
 
     return (
-        <div id="projects" ref={containerRef} className="relative pt-8">
+        <div id="projects" ref={containerRef} className="relative bg-gray-50 py-8">
+            <div className={cn(componentStyles.layout.container, "px-6")}>
             <div className="mb-16" style={{ textAlign: 'center' }}>
                                 <Typography 
                                     variant="h2" 
@@ -142,29 +144,37 @@ const StackingCards = () => {
             {/* Section Title */}
 
             {/* Stacking Cards Container */}
-            <div className=" relative bg-white">
+            <div className="relative bg-gray-50  rounded-2xl">
                 {cards.map((card, index) => (
                     <div
                         key={card.id}
-                        className="w-4/5 mx-auto" // 50% of viewport width, centered
+                        className=" mx-auto" // 50% of viewport width, centered
                         style={{
                             position: 'sticky',
                             top: `${130}px`, // Start below navbar (220px) + stacking offset
                             zIndex: 40 + index, // Decreasing z-index for proper stacking (navbar is z-50)
-                            marginTop: index === 0 ? '50px' : '30px', // Space from top for first card
+                            marginTop: index === 0 ? '50px' : '40px', // Space from top for first card
                         }}
                     >
                         <Card
+                            onMouseEnter={() => setHoveredCardId(card.id)}
+                            onMouseLeave={() => setHoveredCardId(null)}
                             sx={{
-                                backgroundColor: `hsl(${220 + (index * 15)}, 15%, ${95 - (index * 2)}%)`,
-                                boxShadow: `0 ${4 + (index * 2)}px ${20 + (index * 5)}px rgba(0,0,0,0.1)`,
+                                backgroundColor: 'white',
+                                boxShadow: hoveredCardId === card.id 
+                                    ? `0 20px 60px rgba(59, 130, 246, 0.4), 0 ${4 + (index * 2)}px ${20 + (index * 5)}px rgba(0,0,0,0.15)`
+                                    : `0 ${4 + (index * 2)}px ${20 + (index * 5)}px rgba(0,0,0,0.12)`,
                                 borderRadius: '16px',
                                 transformOrigin: 'center top',
-                                transition: 'all 0.3s ease',
-                                border: '1px solid rgba(0,0,0,0.1)',
-                                minHeight: '70vh'
+                                transition: 'all 0.4s ease',
+                                border: hoveredCardId === card.id 
+                                    ? '1px solid rgba(59, 130, 246, 0.3)'
+                                    : '1px solid rgba(0,0,0,0.08)',
+                                
+                                minHeight: '75vh',
+                                cursor: 'pointer'
                             }}
-                            className={cn(componentStyles.card.base, "hover:shadow-xl transition-shadow duration-300")}
+                            className={cn(componentStyles.card.base, "transition-all duration-400")}
                         >
                             <CardContent className="p-8">
                                 {/* Project Title with Tech Tags */}
@@ -410,6 +420,7 @@ const StackingCards = () => {
                     </div>
                 </DialogContent>
             </Dialog>
+            </div>
         </div>
     );
 };
