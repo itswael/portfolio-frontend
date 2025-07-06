@@ -3,6 +3,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from '../assets/logo.svg'
 import {useState, useEffect} from 'react'
 import { navigationItems, handleNavigation } from '../utils/navigation'
+import { componentStyles, cn } from '../theme'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -35,7 +36,7 @@ export default function Navbar() {
     };
 
     return (
-        <Disclosure as="nav" className="bg-gray-50 fixed top-0 left-0 w-full z-50 shadow-sm">
+        <Disclosure as="nav" className={cn(componentStyles.layout.sectionBg, "fixed top-0 left-0 w-full z-50")}>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex max-h-22 items-center justify-between">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
