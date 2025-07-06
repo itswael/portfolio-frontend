@@ -3,6 +3,7 @@ import { Card, CardContent, Typography, Dialog, DialogContent, IconButton, Chip,
 import { GitHub, PlayArrow, Launch, Close, ArrowBackIos, ArrowForwardIos, OpenInNew } from '@mui/icons-material';
 import projectsData from '../data/projectsData.json';
 import { getEmbeddableVideoUrl, isDirectVideoFile, getVideoPlatform, getFallbackVideoLink } from '../utils/videoUtils';
+import { componentStyles, cn } from '../theme';
 
 const StackingCards = () => {
     const [cards] = useState(projectsData.projects);
@@ -65,34 +66,53 @@ const StackingCards = () => {
         }
     };
 
-    const ActionButton = ({ icon, onClick, color = 'primary', tooltip }) => (
-        <IconButton
-            onClick={onClick}
-            sx={{
-                backgroundColor: color === 'primary' ? '#3B82F6' : color === 'secondary' ? '#10B981' : '#F59E0B',
-                color: 'white',
-                width: 48,
-                height: 48,
-                margin: '0 8px',
-                '&:hover': {
-                    backgroundColor: color === 'primary' ? '#2563EB' : color === 'secondary' ? '#059669' : '#D97706',
-                    transform: 'translateY(-2px)',
-                },
-                transition: 'all 0.3s ease',
-                boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-            }}
-            title={tooltip}
-        >
-            {icon}
-        </IconButton>
-    );
+    const ActionButton = ({ icon, onClick, color = 'primary', tooltip }) => {
+        const colorMap = {
+            primary: {
+                bg: '#3B82F6',
+                bgHover: '#2563EB'
+            },
+            secondary: {
+                bg: '#10B981',
+                bgHover: '#059669'
+            },
+            tertiary: {
+                bg: '#F59E0B',
+                bgHover: '#D97706'
+            }
+        };
+
+        const colors = colorMap[color] || colorMap.primary;
+
+        return (
+            <IconButton
+                onClick={onClick}
+                sx={{
+                    backgroundColor: colors.bg,
+                    color: 'white',
+                    width: 48,
+                    height: 48,
+                    margin: '0 8px',
+                    '&:hover': {
+                        backgroundColor: colors.bgHover,
+                        transform: 'translateY(-2px)',
+                    },
+                    transition: 'all 0.3s ease',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                }}
+                title={tooltip}
+            >
+                {icon}
+            </IconButton>
+        );
+    };
 
     return (
         <div id="projects" ref={containerRef} className="relative">
             {/* Section Title */}
-            <div className="text-center  bg-gray-50">
-                <h2 className="text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <div className={cn("text-center", componentStyles.layout.sectionBg)}>
+                <h2 className={cn(componentStyles.heading.h2, "mb-4")}>Featured Projects</h2>
+                <p className={cn(componentStyles.text.bodyLarge, "max-w-2xl mx-auto")}>
                     Here are some of my recent projects that showcase my skills in full-stack development,
                     user experience design, and modern web technologies.
                 </p>
@@ -116,20 +136,19 @@ const StackingCards = () => {
                                 backgroundColor: `hsl(${220 + (index * 15)}, 15%, ${95 - (index * 2)}%)`,
                                 boxShadow: `0 ${4 + (index * 2)}px ${20 + (index * 5)}px rgba(0,0,0,0.1)`,
                                 borderRadius: '16px',
-                                // transform: `scale(${1 - (index * 0.02)})`, // Slight scale down for depth
                                 transformOrigin: 'center top',
                                 transition: 'all 0.3s ease',
                                 border: '1px solid rgba(0,0,0,0.1)',
                                 minHeight: '70vh'
                             }}
-                            className="hover:shadow-xl transition-shadow duration-300"
+                            className={cn(componentStyles.card.base, "hover:shadow-xl transition-shadow duration-300")}
                         >
                             <CardContent className="p-8">
                                 {/* Project Title with Tech Tags */}
                                 <div className="flex flex-wrap items-center justify-between mb-6">
                                     <Typography
                                         variant="h4"
-                                        className="font-bold text-gray-800 mb-2 sm:mb-0"
+                                        className={cn(componentStyles.heading.h3, "mb-2 sm:mb-0")}
                                     >
                                         {card.title}
                                     </Typography>
@@ -157,21 +176,21 @@ const StackingCards = () => {
                                         {/* Description */}
                                         <Typography
                                             paragraph
-                                            className="text-gray-700 text-lg leading-relaxed mb-6"
+                                            className={cn(componentStyles.text.bodyLarge, "mb-6")}
                                         >
                                             {card.description}
                                         </Typography>
 
                                         {/* Key Features/Highlights */}
                                         <div className="mb-6">
-                                            <Typography variant="h6" className="font-semibold text-gray-800 mb-3">
+                                            <Typography variant="h6" className={cn(componentStyles.heading.h5, "mb-3")}>
                                                 Key Features:
                                             </Typography>
                                             <ul className="space-y-2">
                                                 {card.highlights.map((highlight, idx) => (
                                                     <li key={idx} className="flex items-start">
-                                                        <span className="text-blue-500 mr-3 mt-1">•</span>
-                                                        <span className="text-gray-600 text-sm leading-relaxed">
+                                                        <span className={cn(componentStyles.icon.primary, "mr-3 mt-1")}>•</span>
+                                                        <span className={cn(componentStyles.text.bodySmall, "leading-relaxed")}>
                                                             {highlight}
                                                         </span>
                                                     </li>
@@ -272,11 +291,12 @@ const StackingCards = () => {
                                                         <button
                                                             key={idx}
                                                             onClick={() => setCurrentScreenshotIndex(idx)}
-                                                            className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                                                            className={cn(
+                                                                "w-3 h-3 rounded-full transition-all duration-200",
                                                                 idx === currentScreenshotIndex
                                                                     ? 'bg-blue-500 scale-125'
                                                                     : 'bg-gray-300 hover:bg-gray-400'
-                                                            }`}
+                                                            )}
                                                         />
                                                     ))}
                                                 </div>
