@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { LinearProgress, Container, Typography, Chip } from '@mui/material';
 import skillsData from '../data/skillsData.json';
+import { componentStyles, cn } from '../theme';
 
 const Skills = () => {
     const [selectedCategory, setSelectedCategory] = useState(null);
