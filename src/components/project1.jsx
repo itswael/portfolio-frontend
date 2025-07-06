@@ -108,15 +108,38 @@ const StackingCards = () => {
     };
 
     return (
-        <div id="projects" ref={containerRef} className="relative">
+        <div id="projects" ref={containerRef} className="relative pt-8">
+            <div className="mb-16" style={{ textAlign: 'center' }}>
+                                <Typography 
+                                    variant="h2" 
+                                    className={cn(componentStyles.heading.h2, "mb-4")}
+                                    align="center"
+                                    sx={{ 
+                                        fontSize: { xs: '2.5rem', md: '3.5rem' },
+                                        textAlign: 'center !important',
+                                        width: '100%',
+                                        display: 'block'
+                                    }}
+                                >
+                                    Featured Projects
+                                </Typography>
+                                <Typography 
+                                    variant="h6" 
+                                    className={componentStyles.text.muted}
+                                    align="center"
+                                    sx={{ 
+                                        fontSize: { xs: '1rem', md: '1.25rem' },
+                                        textAlign: 'center !important',
+                                        maxWidth: '768px',
+                                        margin: '0 auto',
+                                        display: 'block'
+                                    }}
+                                >
+                                    Here are some of my recent projects that showcase my skills in full-stack development,
+                                    user experience design, and modern web technologies.
+                                </Typography>
+                            </div>
             {/* Section Title */}
-            <div className={cn("text-center", componentStyles.layout.sectionBg)}>
-                <h2 className={cn(componentStyles.heading.h2, "mb-4")}>Featured Projects</h2>
-                <p className={cn(componentStyles.text.bodyLarge, "max-w-2xl mx-auto")}>
-                    Here are some of my recent projects that showcase my skills in full-stack development,
-                    user experience design, and modern web technologies.
-                </p>
-            </div>
 
             {/* Stacking Cards Container */}
             <div className=" relative bg-white">
