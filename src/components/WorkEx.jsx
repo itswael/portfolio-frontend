@@ -3,6 +3,7 @@ import { Container, Typography, Box, Tabs, Tab, Fade, IconButton } from '@mui/ma
 import { Work, School, Timeline, FilterList } from '@mui/icons-material';
 import TimelineItem from './TimelineItem';
 import timelineData from '../data/timelineData.json';
+import { componentStyles, cn } from '../theme';
 
 const WorkEx = () => {
     const [selectedTab, setSelectedTab] = useState(0);
@@ -36,13 +37,13 @@ const WorkEx = () => {
     };
 
     return (
-        <div id="work-experience" className="min-h-screen bg-gray-50 py-16">
+        <div id="work-experience" className={cn(componentStyles.layout.section, componentStyles.layout.sectionBg)}>
             <Container maxWidth="lg">
                 {/* Header Section */}
                 <div className="mb-16" style={{ textAlign: 'center' }}>
                     <Typography 
                         variant="h2" 
-                        className="font-bold text-gray-800 mb-4"
+                        className={cn(componentStyles.heading.h2, "mb-4")}
                         align="center"
                         sx={{ 
                             fontSize: { xs: '2.5rem', md: '3.5rem' },
@@ -55,7 +56,7 @@ const WorkEx = () => {
                     </Typography>
                     <Typography 
                         variant="h6" 
-                        className="text-gray-600"
+                        className={componentStyles.text.muted}
                         align="center"
                         sx={{ 
                             fontSize: { xs: '1rem', md: '1.25rem' },
