@@ -93,8 +93,8 @@ const Contact = () => {
         <div id="contact" className={cn(componentStyles.layout.container, "pt-10 pb-8")}>
             {/* Header Section */}
             <div className="mb-8">
-                <h1 className={cn(componentStyles.heading.h2, "mb-2")}>{ui.headings.main}</h1>
-                <p className={componentStyles.text.muted}>{ui.headings.description}</p>
+                <h1 className={cn(componentStyles.heading.h1, "mb-2")}>{ui.headings.main}</h1>
+                <p className={cn(componentStyles.text.bodyLarge, componentStyles.text.muted)}>{ui.headings.description}</p>
             </div>
 
             <div className="flex flex-col md:flex-row gap-8">
