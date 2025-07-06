@@ -3,6 +3,7 @@ import { Email, Phone, LocationOn, Schedule, CheckCircle, Error } from '@mui/ico
 import { Alert, Snackbar, CircularProgress } from '@mui/material';
 import emailService from '../services/emailService';
 import contactConfig from '../data/contactConfig.json';
+import { componentStyles, cn } from '../theme';
 
 const Contact = () => {
     // Form state
@@ -89,33 +90,33 @@ const Contact = () => {
 
     const { contact, ui } = contactConfig;
     return (
-        <div id="contact" className="max-w-4xl h-160 mx-auto pt-10 pb-40">
+        <div id="contact" className={cn(componentStyles.layout.container, "pt-10 pb-8")}>
             {/* Header Section */}
             <div className="mb-8">
-                <h1 className="text-3xl font-bold mb-2">{ui.headings.main}</h1>
-                <p className="text-gray-600">{ui.headings.description}</p>
+                <h1 className={cn(componentStyles.heading.h2, "mb-2")}>{ui.headings.main}</h1>
+                <p className={componentStyles.text.muted}>{ui.headings.description}</p>
             </div>
 
             <div className="flex flex-col md:flex-row gap-8">
                 {/* Contact Information Section */}
                 <div className="md:w-1/2 space-y-6">
                     <ContactItem 
-                        icon={<Email className="text-blue-500" />} 
+                        icon={<Email className={componentStyles.icon.primary} />} 
                         title={ui.labels.email} 
                         content={contact.email} 
                     />
                     <ContactItem 
-                        icon={<Phone className="text-blue-500" />} 
+                        icon={<Phone className={componentStyles.icon.primary} />} 
                         title={ui.labels.phone} 
                         content={contact.phone} 
                     />
                     <ContactItem 
-                        icon={<LocationOn className="text-blue-500" />} 
+                        icon={<LocationOn className={componentStyles.icon.primary} />} 
                         title={ui.labels.address} 
                         content={contact.location} 
                     />
                     <ContactItem 
-                        icon={<Schedule className="text-blue-500" />} 
+                        icon={<Schedule className={componentStyles.icon.primary} />} 
                         title={ui.labels.workingHours} 
                         content={contact.workingHours} 
                     />
@@ -126,7 +127,7 @@ const Contact = () => {
 
                 {/* Contact Form Section */}
                 <div className="md:w-1/2">
-                    <h2 className="text-xl font-semibold mb-6">{ui.headings.formTitle}</h2>
+                    <h2 className={cn(componentStyles.heading.h4, "mb-6")}>{ui.headings.formTitle}</h2>
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <InputField 
                             placeholder={ui.placeholders.email}
@@ -156,11 +157,12 @@ const Contact = () => {
                         <button 
                             type="submit"
                             disabled={!isFormValid || isSubmitting}
-                            className={`w-full py-3 px-4 rounded-md font-medium transition-all duration-300 flex items-center justify-center gap-2 ${
+                            className={cn(
+                                "w-full py-3 px-4 rounded-md font-medium transition-all duration-300 flex items-center justify-center gap-2",
                                 !isFormValid || isSubmitting
                                     ? 'bg-gray-400 cursor-not-allowed text-gray-700'
-                                    : 'bg-blue-600 hover:bg-blue-700 text-white hover:shadow-lg transform hover:-translate-y-0.5'
-                            }`}
+                                    : componentStyles.button.primary
+                            )}
                         >
                             {isSubmitting ? (
                                 <>
@@ -207,8 +209,8 @@ const ContactItem = ({ icon, title, content }) => {
         <div className="flex items-start gap-4">
             <div className="mt-1">{icon}</div>
             <div>
-                <h3 className="font-medium">{title}</h3>
-                <p className="text-gray-600">{content}</p>
+                <h3 className={componentStyles.text.body.split(' ')[0] + ' font-medium'}>{title}</h3>
+                <p className={componentStyles.text.muted}>{content}</p>
             </div>
         </div>
     );
@@ -232,16 +234,17 @@ const InputField = ({
         }
     };
 
-    const inputClasses = `w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-colors ${
+    const inputClasses = cn(
+        componentStyles.form.input,
         error 
             ? 'border-red-500 focus:ring-red-500 focus:border-red-500' 
-            : 'border-gray-300 focus:ring-blue-500 focus:border-blue-500'
-    }`;
+            : ''
+    );
 
     return (
         <div>
             {label && (
-                <label className="block font-medium mb-2">
+                <label className={componentStyles.form.label}>
                     {label}
                     {required && <span className="text-red-500 ml-1">*</span>}
                 </label>
@@ -266,7 +269,7 @@ const InputField = ({
                 />
             )}
             {error && (
-                <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
+                <p className={cn(componentStyles.form.error, "flex items-center gap-1")}>
                     <Error fontSize="small" />
                     {error}
                 </p>
