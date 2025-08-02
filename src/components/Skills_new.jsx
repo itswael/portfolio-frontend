@@ -313,6 +313,145 @@ const Skills = () => {
                 </div>
                 </div>
 
+                {/* Certificates Carousel */}
+                <div className="mb-16" style={{ textAlign: 'center' }}>
+                    <Typography
+                        variant="h2"
+                        className="font-bold text-gray-800 mb-4"
+                        align="center"
+                        sx={{
+                            textAlign: 'center !important',
+                            width: '100%',
+                            display: 'block'
+                        }}
+                    >
+                        Professional Certificates
+                    </Typography>
+                    <Typography 
+                        variant="h6" 
+                        className="text-gray-600"
+                        align="center"
+                        sx={{ 
+                            textAlign: 'center !important',
+                            maxWidth: '768px',
+                            margin: '0 auto',
+                            display: 'block'
+                        }}
+                    >
+                        Verified certifications that validate my technical expertise and professional development
+                    </Typography>
+                </div>
+
+                <div className="flex justify-center mb-16 px-4">
+                    <div 
+                        className="bg-white rounded-2xl shadow-lg p-8 w-full"
+                        style={{ 
+                            maxWidth: `${diagramWidth}px`
+                        }}
+                    >
+                        <div className="relative">
+                            {/* Certificate Display */}
+                            <div className="flex justify-center items-center">
+                                <div 
+                                    className="relative group cursor-pointer"
+                                    onMouseEnter={() => setHoveredCertificate(currentCertificate)}
+                                    onMouseLeave={() => setHoveredCertificate(null)}
+                                >
+                                    <img
+                                        src={certificates[currentCertificate].image}
+                                        alt={certificates[currentCertificate].name}
+                                        className="max-w-full h-auto rounded-lg shadow-lg transition-all duration-300 group-hover:shadow-xl"
+                                        style={{ 
+                                            maxHeight: '500px',
+                                            transform: hoveredCertificate === currentCertificate ? 'scale(1.02)' : 'scale(1)'
+                                        }}
+                                    />
+                                    
+                                    {/* Validation Button - appears on hover */}
+                                    {hoveredCertificate === currentCertificate && (
+                                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                                            <Button
+                                                variant="contained"
+                                                startIcon={<ExternalLink size={16} />}
+                                                onClick={() => window.open(certificates[currentCertificate].validationUrl, '_blank')}
+                                                sx={{
+                                                    backgroundColor: '#3B82F6',
+                                                    color: 'white',
+                                                    borderRadius: '12px',
+                                                    textTransform: 'none',
+                                                    fontWeight: 'bold',
+                                                    padding: '8px 16px',
+                                                    boxShadow: '0 4px 12px rgba(59, 130, 246, 0.4)',
+                                                    '&:hover': {
+                                                        backgroundColor: '#2563EB',
+                                                        boxShadow: '0 6px 16px rgba(59, 130, 246, 0.6)',
+                                                    }
+                                                }}
+                                            >
+                                                Validate Certificate
+                                            </Button>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+
+                            {/* Certificate Info */}
+                            <div className="text-center mt-6">
+                                <h3 className="text-xl font-bold text-gray-800 mb-2">
+                                    {certificates[currentCertificate].name}
+                                </h3>
+                                <p className="text-gray-600">
+                                    {certificates[currentCertificate].description}
+                                </p>
+                            </div>
+
+                            {/* Navigation Arrows */}
+                            {certificates.length > 1 && (
+                                <>
+                                    <button
+                                        onClick={prevCertificate}
+                                        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 group"
+                                        style={{ zIndex: 10 }}
+                                    >
+                                        <ChevronLeft 
+                                            size={24} 
+                                            className="text-gray-600 group-hover:text-blue-600 transition-colors duration-300" 
+                                        />
+                                    </button>
+                                    
+                                    <button
+                                        onClick={nextCertificate}
+                                        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 group"
+                                        style={{ zIndex: 10 }}
+                                    >
+                                        <ChevronRight 
+                                            size={24} 
+                                            className="text-gray-600 group-hover:text-blue-600 transition-colors duration-300" 
+                                        />
+                                    </button>
+                                </>
+                            )}
+
+                            {/* Dots Indicator */}
+                            {certificates.length > 1 && (
+                                <div className="flex justify-center mt-6 space-x-2">
+                                    {certificates.map((_, index) => (
+                                        <button
+                                            key={index}
+                                            onClick={() => setCurrentCertificate(index)}
+                                            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                                                currentCertificate === index 
+                                                    ? 'bg-blue-600 scale-125' 
+                                                    : 'bg-gray-300 hover:bg-gray-400'
+                                            }`}
+                                        />
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                </div>
+
                 {/* Soft Skills */}
                 <div className="mb-16" style={{ textAlign: 'center' }}>
                     <Typography
