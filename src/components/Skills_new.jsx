@@ -1,11 +1,23 @@
 import React, { useState } from 'react';
-import { LinearProgress, Container, Typography, Chip } from '@mui/material';
+import { LinearProgress, Container, Typography, Chip, Button } from '@mui/material';
+import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 import skillsData from '../data/skillsData.json';
+import {certificates} from '../data/certificateData.js';
 import { componentStyles, cn } from '../theme';
 
 const Skills = () => {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [hoveredSkill, setHoveredSkill] = useState(null);
+    const [currentCertificate, setCurrentCertificate] = useState(0);
+    const [hoveredCertificate, setHoveredCertificate] = useState(null);
+
+    const nextCertificate = () => {
+        setCurrentCertificate((prev) => (prev + 1) % certificates.length);
+    };
+
+    const prevCertificate = () => {
+        setCurrentCertificate((prev) => (prev - 1 + certificates.length) % certificates.length);
+    };
 
     // Responsive positions for better layout - centered within container
     const diagramWidth = 1100; // Total diagram width
