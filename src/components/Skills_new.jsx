@@ -302,13 +302,12 @@ const Skills = () => {
                 </div>
 
                 {/* Soft Skills */}
-                <div className="bg-white rounded-2xl shadow-lg p-8">
-                <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                    <Typography 
-                        variant="h3" 
-                        className="font-bold text-gray-800"
+                <div className="mb-16" style={{ textAlign: 'center' }}>
+                    <Typography
+                        variant="h2"
+                        className="font-bold text-gray-800 mb-4"
                         align="center"
-                        sx={{ 
+                        sx={{
                             textAlign: 'center !important',
                             width: '100%',
                             display: 'block'
@@ -316,7 +315,28 @@ const Skills = () => {
                     >
                         Professional Skills & Qualities
                     </Typography>
+                    <Typography 
+                        variant="h6" 
+                        className="text-gray-600"
+                        align="center"
+                        sx={{ 
+                            textAlign: 'center !important',
+                            maxWidth: '768px',
+                            margin: '0 auto',
+                            display: 'block'
+                        }}
+                    >
+                        The human skills that complement my technical expertise and drive successful collaborations
+                    </Typography>
                 </div>
+                <div className="flex justify-center mb-16 px-4">
+                    <div 
+                        className="bg-white rounded-2xl shadow-lg p-8 w-full"
+                        style={{ 
+                            maxWidth: `${diagramWidth}px`
+                        }}
+                    >
+
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {skillsData.softSkills.map((skill, index) => (
                             <div
@@ -329,25 +349,25 @@ const Skills = () => {
                                     </div>
                                     <div className="flex-1">
                                         <h4 className="font-bold text-gray-800 text-lg">{skill.name}</h4>
-                                        <div className="flex items-center mt-2">
-                                            <LinearProgress
-                                                variant="determinate"
-                                                value={skill.level}
-                                                sx={{
-                                                    width: 100,
-                                                    height: 6,
-                                                    borderRadius: 3,
-                                                    backgroundColor: '#E5E7EB',
-                                                    '& .MuiLinearProgress-bar': {
-                                                        backgroundColor: '#3B82F6',
-                                                        borderRadius: 3,
-                                                    }
-                                                }}
-                                            />
-                                            <span className="ml-2 text-sm font-medium text-gray-600">
-                                                {skill.level}%
-                                            </span>
-                                        </div>
+                                        {/*<div className="flex items-center mt-2">*/}
+                                        {/*    <LinearProgress*/}
+                                        {/*        variant="determinate"*/}
+                                        {/*        value={skill.level}*/}
+                                        {/*        sx={{*/}
+                                        {/*            width: 100,*/}
+                                        {/*            height: 6,*/}
+                                        {/*            borderRadius: 3,*/}
+                                        {/*            backgroundColor: '#E5E7EB',*/}
+                                        {/*            '& .MuiLinearProgress-bar': {*/}
+                                        {/*                backgroundColor: '#3B82F6',*/}
+                                        {/*                borderRadius: 3,*/}
+                                        {/*            }*/}
+                                        {/*        }}*/}
+                                        {/*    />*/}
+                                        {/*    <span className="ml-2 text-sm font-medium text-gray-600">*/}
+                                        {/*        {skill.level}%*/}
+                                        {/*    </span>*/}
+                                        {/*</div>*/}
                                     </div>
                                 </div>
                                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -356,6 +376,7 @@ const Skills = () => {
                             </div>
                         ))}
                     </div>
+                </div>
                 </div>
             </Container>
         </div>
