@@ -34,7 +34,9 @@
       "videoLink": "",
       "liveLink": "",
       "screenshots": [
-        "/screenshots/filckpicker-1.jpg"
+        "/screenshots/flickpicker-1.jpg",
+        "/screenshots/flickpicker-2.jpg",
+        "/screenshots/flickpicker-3.jpg"
       ]
     },
     {
@@ -73,7 +75,10 @@
       "videoLink": "https://drive.google.com/file/d/1LywboJhJ_LxYwHm6a4FTGKUGW-ZBsTMz/view",
       "liveLink": "https://gatorcan-demo.herokuapp.com",
       "screenshots": [
-        "/screenshots/gatorcan-2.jpg"
+        "/screenshots/gatorcan-1.png",
+        "/screenshots/gatorcan-2.png",
+        "/screenshots/gatorcan-3.png",
+        "/screenshots/gatorcan-4.png"
       ]
     }
   ]
