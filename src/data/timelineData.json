@@ -80,7 +80,7 @@
         "Built a custom authorization mechanism with Dataverse and Python to manage secure, role-based access across applications, incorporating user feedback to refine system design and reducing administrative overhead by 20%", 
         "Optimized database operations by implementing multithreading techniques, reducing processing times by 93% (from 240 sec. to 16 sec.) and proactively applying best practices to enhance system efficiency and reliability"
       ],
-      "technologies": ["Microsoft Power Automate", "RPA", "Shell Scripting", "Flask", "Python" "Blueprism", "AI/ML", "MS SQL", "Oracle Db", "Dataverse"],
+      "technologies": ["Microsoft Power Automate", "RPA", "Shell Scripting", "Flask", "Python","Blueprism", "AI/ML", "MS SQL", "Oracle Db", "Dataverse"],
       "icon": "🚀"
     },
     {
