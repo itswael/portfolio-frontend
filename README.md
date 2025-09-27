@@ -213,7 +213,7 @@ See the [LICENSE](./LICENSE) file for full terms.
 **Mohammad Wael**
 - LinkedIn: [linkedin.com/in/itswael](https://linkedin.com/in/itswael)
 - GitHub: [github.com/itswael](https://github.com/itswael)
-- Email: [Contact through the portfolio](https://yourportfolio.com)
+- Email: [Contact through the portfolio](https://itswael.github.io)
 
 ## 🚀 What's Next?
 
