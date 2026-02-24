@@ -42,7 +42,7 @@
     {
       "id": 3,
       "title": "Movie Revenue Prediction",
-      "description": "A machine learning project that forecasts a movie’s box office earnings, leveraging metadata (budget, cast, genre), audience sentiment (reviews, social media trends) backed by CRISP-DM methodology.",
+      "description": "A machine learning project that forecasts a movie's box office earnings, leveraging metadata (budget, cast, genre), audience sentiment (reviews, social media trends) backed by CRISP-DM methodology.",
       "highlights": [
         "Integrating data from IMDb, TMDb, Box Office Mojo, and social platforms to generate insights for studios and investors. ",
         "Utilizing NLP-based script analysis to identify key revenue predictors from movie dialogues and descriptions.",
@@ -79,6 +79,27 @@
         "/screenshots/gatorcan-2.png",
         "/screenshots/gatorcan-3.png",
         "/screenshots/gatorcan-4.png"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "HiringInUSA",
+      "description": "SEO-optimized job tracking and curation platform built as a production-grade Next.js application to practice scalable frontend architecture, metadata optimization, and analytics-driven performance monitoring.",
+      "highlights": [
+        "Designed and developed a fully responsive Next.js application with dynamic routing and structured metadata for improved search visibility.",
+        "Implemented modular UI architecture using Material UI, ensuring reusable components and scalable layout patterns.",
+        "Built structured data pipelines to organize, categorize, and display curated job listings efficiently.",
+        "Integrated analytics tooling to monitor traffic patterns and optimize performance using Core Web Vitals principles.",
+        "Engineered ad-ready layout infrastructure with feature-flag controls to support future monetization without architectural changes."
+      ],
+      "tech": ["Next.js", "React.js", "TypeScript", "Material UI", "Google Analytics"],
+      "githubLink": "https://github.com/itswael/HiringInUSA",
+      "videoLink": "",
+      "liveLink": "https://hiring-in-usa.vercel.app",
+      "screenshots": [
+        "/screenshots/hiringinusa-1.png",
+        "/screenshots/hiringinusa-2.png",
+        "/screenshots/hiringinusa-3.png"
       ]
     }
   ]
