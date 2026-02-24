@@ -3,7 +3,7 @@
     {
       "id": 1,
       "type": "work",
-      "title": "Software Engineer (GRA)",
+      "title": "Graduate Research Assistant",
       "company": "University of Florida",
       "location": "Florida, USA",
       "startDate": "Aug 2025",
@@ -30,10 +30,10 @@
       "startDate": "2024",
       "endDate": "2026",
       "duration": "2 years",
-      "GPA": "4.0",
+      "GPA": "3.96",
       "description": "Focused on Mathematics, Artificial Intelligence, Machine Learning, Data Science and Algorithms with emphasis on problem-solving and analytical thinking.",
       "achievements": [
-        "Maintaining a First Class Honours (GPA: 4.0/4.0).",
+        "Maintaining a First Class Honours (GPA: 3.96/4.0).",
         "Designed and built GatorCan, a Full-stack educational platform for seamless course management and collaboration.",
         "Developed an Object Oriented version of Pascal Programming language"
       ],
