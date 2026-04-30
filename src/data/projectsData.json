@@ -101,6 +101,72 @@
         "/screenshots/hiringinusa-2.jpg",
         "/screenshots/hiringinusa-3.jpg"
       ]
+    },
+    {
+      "id": 6,
+      "title": "UF Climate Data Platform",
+      "description": "Production-grade weather data fusion platform that aggregates NASA POWER satellite data and CHIRPS precipitation records into optimized Zarr stores, featuring a Next.js admin dashboard for multi-point downloads with advanced temporal caching and async query optimization.",
+      "highlights": [
+        "Engineered a distributed data pipeline that ingests NASA POWER (MERRA-2, SYN1deg) and CHIRPS precipitation datasets into Zarr format, enabling efficient temporal-first queries across 40+ years of historical climate data.",
+        "Architected a Python backend with async data fetchers implementing intelligent time-slice caching and LRU eviction, achieving 83-94x performance improvements for multi-location queries through batched parallel processing.",
+        "Built a full-stack Next.js application with dynamic routing and structured metadata for shapefile-based multi-point downloads, CLI tools, and RESTful APIs supporting real-world agricultural weather analysis.",
+        "Integrated email notification systems and robust error handling for long-running batch operations, with comprehensive validation workflows covering data availability across historical (1981+) and real-time datasets.",
+        "Optimized data retrieval using xarray/fsspec with temporal-domain caching strategies, reducing redundant S3 requests from O(n) per location to O(1) per date range, enabling scalable multi-point agricultural queries."
+      ],
+      "tech": ["Next.js", "React", "TypeScript", "Python", "FastAPI", "xarray", "Zarr", "AWS S3", "SQLite", "Material UI", "asyncio"],
+      "githubLink": "https://github.com/itswael/uf-chirps-zarr",
+      "videoLink": "",
+      "liveLink": "",
+      "screenshots": [
+        "/screenshots/ufclimatedata1.jpg",
+        "/screenshots/ufclimatedata2.jpg",
+        "/screenshots/ufclimatedata3.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "DSSAT-RAG",
+      "description": "Production-grade agricultural data intelligence platform built with Next.js to automate DSSAT simulation workflows, enable intelligent data retrieval through RAG, and empower farmers with AI-driven insights from crop modeling outputs.",
+      "highlights": [
+        "Engineered end-to-end automation pipeline integrating Google Drive monitoring, DSSAT/Pythia output detection, and chunked data ingestion into RAG vector database for efficient agricultural knowledge retrieval.",
+        "Architected responsive Next.js chatbot UI with Material-UI components supporting real-time farmer queries against processed simulation data with full Markdown rendering and syntax-highlighted outputs.",
+        "Designed modular service-oriented architecture with TypeScript strict typing, API abstraction layer, and production-ready error handling for scalable multi-user agricultural platform.",
+        "Implemented n8n-based workflow automation orchestrating file monitoring, Google Drive integration, and batch processing pipelines to reduce manual data handling overhead.",
+        "Built semantically-aware data chunking and vector embeddings infrastructure to enable contextual agricultural queries across DSSAT crop models, soil parameters, and yield predictions."
+      ],
+      "tech": ["Next.js", "React", "TypeScript", "Material-UI", "n8n", "Google Drive API", "Axios", "Markdown Rendering"],
+      "githubLink": "https://github.com/itswael/DSSAT-RAG",
+      "videoLink": "",
+      "liveLink": "",
+      "screenshots": [
+        "/screenshots/dssatrag1.jpg",
+        "/screenshots/dssatrag2.jpg",
+        "/screenshots/dssatrag3.jpg",
+        "/screenshots/dssatrag4.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Agent-as-a-Judge",      
+      "description": "Production-grade LLM evaluation and benchmarking framework built in Python to systematically assess model performance (with and without context) using hybrid scoring (deterministic + LLM-as-a-judge), enabling data-driven decisions between proprietary and local models.",
+      "highlights": [
+        "Designed a modular evaluation pipeline to compare context-aware vs context-free model outputs using structured datasets and parallel inference workflows.",
+        "Implemented hybrid scoring architecture combining embedding-based semantic similarity, rule-based validation, and LLM-as-a-judge for multi-dimensional evaluation.",
+        "Developed metric framework covering correctness, faithfulness, relevance, conciseness, and context gain to quantify real impact of retrieval augmentation.",
+        "Built extensible benchmarking system to evaluate multiple models (OpenAI, Gemini, local LLMs) with reproducible experiments and leaderboard-style reporting.",
+        "Engineered structured evaluation prompts with JSON outputs to ensure deterministic scoring and minimize judge bias and hallucinated evaluations.",
+        "Integrated experiment tracking, logging, and batch evaluation pipelines to support scalable testing and iterative model improvements.",
+        "Designed pluggable architecture for swapping embedding models, LLM providers, and evaluation strategies without refactoring core pipeline."
+      ],
+      "tech": ["Python","LangChain","LlamaIndex","Ragas","DeepEval","OpenAI API","Hugging Face Transformers","FAISS / Qdrant","Pandas","NumPy"],
+      "githubLink": "https://github.com/itswael/Agent-as-a-Judge",
+      "videoLink": "",
+      "liveLink": "",
+      "screenshots": [
+        "/screenshots/agentasajudge1.jpg",
+        "/screenshots/agentasajudge2.jpg",
+        "/screenshots/agentasajudge3.jpg"
+      ]
     }
   ]
 }
