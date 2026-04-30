@@ -32,7 +32,7 @@ const Footer = () => {
                         <GitHubIcon fontSize="small" />
                     </a>
                     <a
-                        href="https://leetcode.com/u/user1326iN/"
+                        href="https://leetcode.com/u/itswael/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-gray-700 hover:text-orange-500 transition-colors"
