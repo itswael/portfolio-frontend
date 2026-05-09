@@ -73,26 +73,24 @@ export default function About() {
                         <div className={componentStyles.text.body}>
                             <p className={componentStyles.text.bodyLarge}>
                                 <span className="float-left text-8xl font-serif text-gray-800 leading-none mr-3 mt-2">I</span>
-                                'm a backend-focused software engineer with a passion for building reliable, scalable systems that solve real-world problems. From architecting microservices in Spring Boot and Flask to automating workflows with Redis and Golang, my work reflects a balance of deep technical rigor and clear business impact.
+                                build software that scales, performs, and actually solves problems. From distributed backend systems to AI-powered platforms, I enjoy turning complex ideas into reliable products with clean engineering and real-world impact.
                             </p>
                         </div>
 
                         {/* Section Separator */}
                         <div className="border-t border-gray-300 pt-8">
-                            <h3 className={cn(componentStyles.heading.h4, "mb-4")}>A little bit more about me. Like anyone cares.</h3>
+                            <h3 className={cn(componentStyles.heading.h4, "mb-4")}>Let me say a bit more.</h3>
                             
                             <div className={cn(componentStyles.text.body, "space-y-4")}>
                                 <p>
-                                    I take ownership seriously — not just of the code I write, but of the outcomes it drives. Whether working solo or as part of a cross-functional team, I believe in high standards, strong collaboration, and delivering solutions that last. My experience spans everything from secure API design and cloud deployment to AI-integrated features and performance optimization.
-                                </p>
+                                    I'm a software engineer who genuinely enjoys building things — especially the kind of systems people depend on every day without ever noticing.</p>
                                 
                                 <p>
-                                    Curiosity fuels everything I do. I'm continuously exploring new tools, frameworks, and architectural patterns — currently diving into React and machine learning to expand my full-stack and AI capabilities.
-                                </p>
+                                    I like solving difficult problems, simplifying complexity, and creating software that feels fast, reliable, and thoughtfully designed. Most of my work lives in backend engineering, cloud infrastructure, and scalable systems, but lately I've also been exploring AI systems and modern product engineering.</p>
                                 
                                 <p>
-                                    I approach software with a builder's mindset: invent, simplify, dive deep, and deliver. I value systems that are not only functional, but elegant. I care about clean code, thoughtful abstractions, and above all, how technology can serve people better.
-                                </p>
+                                    What drives me most is curiosity. I enjoy learning new technologies, understanding how systems work under the hood, and continuously improving the way I build. Whether it's optimizing performance, designing scalable architectures, or experimenting with new ideas, I care about building things the right way — not just the quick way.</p>
+                                <p>At the end of the day, I'm simply someone who loves engineering elegant solutions to meaningful problems.</p>
                             </div>
                         </div>
 
