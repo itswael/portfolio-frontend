@@ -9,7 +9,7 @@
       "startDate": "Sep 2025",
       "endDate": "Present",
       "duration": "Active",
-      "description": "Built an end-to-end pipeline to optimize DSSAT-based crop simulations by integrating weather (NASA POWER, OpenMeteo), soil, and AI-driven RAG-based interfaces. Delivered scalable geospatial analysis and LLM-powered crop intelligence tools using HPC infrastructure.",
+      "description": "Built a scalable climate intelligence platform for DSSAT workflows by processing multi-terabyte geospatial data on S3, automating fault-tolerant ingestion with Docker and ECS/Fargate, and delivering high-throughput async services with Zarr, Redis, Qdrant, and PostgreSQL.",
       "achievements": [
         "Architected a scalable climate-data platform on Amazon S3 for ingesting and processing multi-terabyte CHIRPS raster datasets into optimized Zarr storage, enabling DSSAT-ready analytics workflows while reducing environment setup time by 90%.", 
         "Designed fault-tolerant, idempotent ingestion pipelines using Docker, ECS/Fargate, async processing, and scheduled batch workflows, reducing large-scale processing time by 70% and improving workflow reliability for scientific data processing.", 
@@ -48,10 +48,10 @@
       "startDate": "Apr 2021",
       "endDate": "Aug 2024",
       "duration": "3.3 years",
-      "description": "Developed and owned scalable microservices using Java, Spring Boot, and AWS, powering critical workflows for 1,000+ users. Achieved significant performance gains via Redis caching, efficient DB queries, and Kafka-based async processing. Secured APIs with JWT/OAuth2, followed TDD and CI/CD best practices using Jenkins, GitHub Actions, and Docker. Led full-cycle backend delivery with AWS ECS, RDS, and CloudWatch for resilient, observable deployments.",
+      "description": "Designed and delivered high-scale event-driven backend systems on Java, Spring Boot, Kafka, PostgreSQL, Redis, and AWS, processing 15M+ daily events with 4x higher throughput, sub-350ms latency, and 120K+ requests per minute. Led EKS migration, automated CI/CD, and improved observability, reliability, and deployment frequency across distributed microservices.",
       "achievements": [
         "Architected and developed large-scale event-driven transaction processing systems using Java, Spring Boot, Kafka (MSK), PostgreSQL (RDS), Redis (ElastiCache), and Amazon EKS, supporting 15M+ daily events across distributed microservices with high availability and reliability.",
-        "Improved platform throughput by 4× and reduced end-to-end processing latency from ~2s to under 350ms through asynchronous processing, optimized batching, distributed caching, and JVM/database performance tuning.", 
+        "Improved platform throughput by 4x and reduced end-to-end processing latency from ~2s to under 350ms through asynchronous processing, optimized batching, distributed caching, and JVM/database performance tuning.", 
         "Built high-throughput REST and asynchronous APIs handling 120K+ requests/minute with p99 latency below 180ms, leveraging scalable microservice architectures, Redis caching, API Gateway, and load-balanced deployments.", 
         "Led migration from VM-based deployments to containerized microservices on Amazon EKS, reducing deployment failures by 80% while improving scalability, deployment consistency, and infrastructure utilization.", 
         "Developed automated CI/CD pipelines using CodePipeline, CodeBuild, Docker, Helm, and GitHub Actions, enabling zero-downtime deployments and increasing deployment frequency from weekly releases to 20+ production deployments per day.", 
