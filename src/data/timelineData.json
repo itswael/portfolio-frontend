@@ -6,19 +6,18 @@
       "title": "Graduate Research Assistant",
       "company": "University of Florida",
       "location": "Florida, USA",
-      "startDate": "Aug 2025",
+      "startDate": "Sep 2025",
       "endDate": "Present",
       "duration": "Active",
       "description": "Built an end-to-end pipeline to optimize DSSAT-based crop simulations by integrating weather (NASA POWER, OpenMeteo), soil, and AI-driven RAG-based interfaces. Delivered scalable geospatial analysis and LLM-powered crop intelligence tools using HPC infrastructure.",
       "achievements": [
-        "Enhanced agricultural modeling systems (Pythia & DSSAT) by developing automated pipelines to retrieve, clean, and feed satellite-derived climate and soil data, eliminating manual file downloads and reducing model setup time by 70%.",
-        "Integrated weather data from NASA POWER (S3 + Zarr format) and OpenMeteo API, transforming multi-temporal spatial data into ICASA-compatible files using geospatial processing and Python-based ETL pipelines.",
-        "Built a parallelized processing mechanism using Python multiprocessing and vectorized NumPy/Pandas operations to process high-resolution geospatial data per grid cell, improving runtime performance by 5x on dense coordinate datasets.",
-        "Leveraged UF HyperGator high-performance computing resources to accelerate climate data extraction and simulation runs across large-scale experimental regions.",
-        "Designed a modular framework for AI-based crop insights, integrating RAG (Retrieval-Augmented Generation) and MCP with OpenAI GPT APIs, enabling natural language access to spatial crop forecasts and agronomic recommendations.",
-        "Collaborated with cross-disciplinary teams (agronomy, computer science, and data science) to ensure domain-aligned, reproducible, and scalable research workflows using Docker, Git, and Jupyter Notebooks."
+        "Architected a scalable climate-data platform on Amazon S3 for ingesting and processing multi-terabyte CHIRPS raster datasets into optimized Zarr storage, enabling DSSAT-ready analytics workflows while reducing environment setup time by 90%.", 
+        "Designed fault-tolerant, idempotent ingestion pipelines using Docker, ECS/Fargate, async processing, and scheduled batch workflows, reducing large-scale processing time by 70% and improving workflow reliability for scientific data processing.", 
+        "Built concurrent processing services handling 1000+ coordinate-based requests using async I/O, batching, lazy loading, and Redis-backed caching, significantly improving throughput and retrieval performance for compute-intensive workloads.", 
+        "Optimized scientific data storage and retrieval using compressed Zarr formats, intelligent caching, and cloud object storage strategies, reducing storage footprint by 60% while improving scalability for multi-terabyte datasets.", 
+        "Engineered production-grade RAG and Agent-as-a-Judge evaluation systems using Qdrant, PostgreSQL, and distributed asynchronous pipelines, improving retrieval relevance and contextual answer accuracy by ~40% while reducing evaluation latency by ~65%."
       ],
-      "technologies": ["Python", "RAG", "MCP", "Docker", "Git", "OpenAI", "Zarr", "S3", "Numpy/Pandas", "MS SQL", "XML"],
+      "technologies": ["semantic search", "agent-as-a-judge", "Python", "RAG", "MCP", "Docker", "Git", "OpenAI", "Zarr", "S3", "Numpy/Pandas", "rasterio", "Qdrant", "PostgreSQL", "Redis", "ECS/Fargate"],
       "icon": "🚀"
     },
     {
@@ -46,45 +45,25 @@
       "title": "Backend Developer",
       "company": "Tata Consultancy Services",
       "location": "Bangalore, India",
-      "startDate": "Jan 2023",
+      "startDate": "Apr 2021",
       "endDate": "Aug 2024",
-      "duration": "1.6 years",
+      "duration": "3.3 years",
       "description": "Developed and owned scalable microservices using Java, Spring Boot, and AWS, powering critical workflows for 1,000+ users. Achieved significant performance gains via Redis caching, efficient DB queries, and Kafka-based async processing. Secured APIs with JWT/OAuth2, followed TDD and CI/CD best practices using Jenkins, GitHub Actions, and Docker. Led full-cycle backend delivery with AWS ECS, RDS, and CloudWatch for resilient, observable deployments.",
       "achievements": [
-        "Designed and owned highly available microservices using Java and Spring Boot, powering core operational workflows for 1,000+ internal users; reduced latency by 40% via caching and efficient query design.",
-        "Integrated Apache Kafka to enable asynchronous event processing, improving throughput by 35%.",
-        "Applied Redis caching to reduce DB read latency by 90%, improving API response times during peak load.",
-        "Built secure REST APIs with JWT and OAuth2 authentication, applying SOLID principles and layered architecture",
-        "Led CI/CD pipeline setup using Jenkins, GitHub Actions, and Docker; reduced deployment time by 80%",
-        "Followed TDD with JUnit, Mockito, and REST-assured to ensure >90% test coverage",
-        "Participated in Agile/XP sprints, pair programming, and code reviews across distributed teams",
-        "Led design and implementation of end-to-end backend workflows using AWS ECS, RDS, and Lambda, improving system resilience & reducing failure recovery time by 60%; followed Amazon's Operational Excellence principles with dashboards, alarms, rollbacks",
-        "Deployed microservices to AWS ECS with RDS (Aurora Postgres) backend and configured CloudWatch alerts"
+        "Architected and developed large-scale event-driven transaction processing systems using Java, Spring Boot, Kafka (MSK), PostgreSQL (RDS), Redis (ElastiCache), and Amazon EKS, supporting 15M+ daily events across distributed microservices with high availability and reliability.",
+        "Improved platform throughput by 4× and reduced end-to-end processing latency from ~2s to under 350ms through asynchronous processing, optimized batching, distributed caching, and JVM/database performance tuning.", 
+        "Built high-throughput REST and asynchronous APIs handling 120K+ requests/minute with p99 latency below 180ms, leveraging scalable microservice architectures, Redis caching, API Gateway, and load-balanced deployments.", 
+        "Led migration from VM-based deployments to containerized microservices on Amazon EKS, reducing deployment failures by 80% while improving scalability, deployment consistency, and infrastructure utilization.", 
+        "Developed automated CI/CD pipelines using CodePipeline, CodeBuild, Docker, Helm, and GitHub Actions, enabling zero-downtime deployments and increasing deployment frequency from weekly releases to 20+ production deployments per day.", 
+        "Implemented centralized observability, autoscaling, health checks, distributed tracing, and PostgreSQL query optimizations using CloudWatch, Prometheus, and Grafana, reducing incident detection time by 60% and significantly improving operational visibility and system performance.",
+        "Collaborated with product, infrastructure, and SRE teams to design resilient distributed systems, scalable API contracts, and deployment strategies supporting millions of daily user interactions.",
+        "Mentored junior engineers on Kafka, Kubernetes, CI/CD, and production debugging to improve onboarding efficiency and engineering velocity."
       ],
       "technologies": ["Java", "Spring Boot", "CI/CD", "Caching", "Kafka", "Redis", "Jenkins", "GitHub Actions", "Docker", "REST APIs", "AWS", "Junit", "Mockito", "REST-assured"],
       "icon": "🚀"
     },
     {
       "id": 4,
-      "type": "work",
-      "title": "Automation Developer",
-      "company": "Tata Consultancy Services",
-      "location": "Bangalore, India",
-      "startDate": "Apr 2021",
-      "endDate": "Jan 2023",
-      "duration": "1.7 years",
-      "description": "Engineered a chatbot and automation suite using Power Automate, Flask, and Python, reducing downtime by 10% and saving 800+ hours annually through cross-platform task automation. Enhanced system performance by 93% via multithreaded DB optimization and secured access with a custom Dataverse-based authorization framework, cutting admin overhead by 20%.",
-      "achievements": [
-        "Developed and deployed a chatbot solution leveraging Power Automate (PVA) and Flask REST API to automate key processes, demonstrating strong object-oriented programming skills while reducing downtime by 10%", 
-        "Automated repetitive tasks across mainframes, Windows, web applications, and databases using Python and Shell scripting, saving 800+ hours annually and improving team productivity by 20% through effective collaboration with stakeholders", 
-        "Built a custom authorization mechanism with Dataverse and Python to manage secure, role-based access across applications, incorporating user feedback to refine system design and reducing administrative overhead by 20%", 
-        "Optimized database operations by implementing multithreading techniques, reducing processing times by 93% (from 240 sec. to 16 sec.) and proactively applying best practices to enhance system efficiency and reliability"
-      ],
-      "technologies": ["Microsoft Power Automate", "RPA", "Shell Scripting", "Flask", "Python","Blueprism", "AI/ML", "MS SQL", "Oracle Db", "Dataverse"],
-      "icon": "🚀"
-    },
-    {
-      "id": 5,
       "type": "work",
       "title": "Fullstack Developer",
       "company": "Tata Consultancy Services",
@@ -102,7 +81,7 @@
       "icon": "🚀"
     },
     {
-      "id": 6,
+      "id": 5,
       "type": "education",
       "title": "Bachelor of Technology in Computer Science and Engineering",
       "company": "Dr. A. P. J. Abdul Kalam Technical University",
