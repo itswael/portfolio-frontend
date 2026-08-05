@@ -1,44 +1,41 @@
 import React from 'react';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import CodeIcon from '@mui/icons-material/Code';
+import { Linkedin, Github, Code2 } from 'lucide-react';
+
 const Footer = () => {
     return (
-        <footer className="bg-gray-50 py-6 px-4 border-t border-gray-200">
-            <div className="container mx-auto flex flex-col md:flex-row justify-around items-center">
-                {/* Copyright text */}
-                <div className="text-gray-600 mb-4 md:mb-0">
-                     © {new Date().getFullYear()} Mohammad Wael
+        <footer className="border-t border-white/[0.08] py-6 px-4">
+            <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+                <div className="font-mono text-xs text-slate-500 tracking-wide">
+                    © {new Date().getFullYear()} MOHAMMAD WAEL
                 </div>
 
-                {/* Social icons */}
-                <div className="flex space-x-4">
+                <div className="flex gap-4">
                     <a
                         href="https://www.linkedin.com/in/itswael"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-700 hover:text-blue-600 transition-colors"
+                        className="text-slate-500 hover:text-cyan-400 transition-colors"
                         aria-label="LinkedIn"
                     >
-                        <LinkedInIcon fontSize="small" />
+                        <Linkedin size={16} />
                     </a>
                     <a
                         href="https://github.com/itswael"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-700 hover:text-gray-900 transition-colors"
+                        className="text-slate-500 hover:text-cyan-400 transition-colors"
                         aria-label="GitHub"
                     >
-                        <GitHubIcon fontSize="small" />
+                        <Github size={16} />
                     </a>
                     <a
                         href="https://leetcode.com/u/itswael/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-700 hover:text-orange-500 transition-colors"
+                        className="text-slate-500 hover:text-cyan-400 transition-colors"
                         aria-label="LeetCode"
                     >
-                        <CodeIcon fontSize="small" />
+                        <Code2 size={16} />
                     </a>
                 </div>
             </div>
