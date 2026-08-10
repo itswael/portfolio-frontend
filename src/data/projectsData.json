@@ -11,7 +11,7 @@
         "Integrated Razorpay and Stripe payment gateways exercising the Strategy pattern with webhooks.",
         "Deployed on AWS Elastic Beanstalk with AWS RDS and ensured reliability through robust logging and monitoring."
       ],
-      "tech": ["React", "Node.js", "MongoDB", "Stripe"],
+      "tech": ["Java", "Spring Boot", "MySQL", "Redis", "OpenSearch", "AWS"],
       "githubLink": "https://github.com/itswael/productservice_proxy",
       "videoLink": "",
       "liveLink": "",
@@ -167,6 +167,64 @@
         "/screenshots/agentasajudge2.jpg",
         "/screenshots/agentasajudge3.jpg"
       ]
+    },
+    {
+      "id": 9,
+      "title": "BikeGarage — Bike Service Center Management Platform",
+      "description": "Full-stack platform for bike service center owners to manage customers, service records, and billing: a Spring Boot 3 / Java 17 REST API (BikeGarage) paired with a React Native/Expo Android client (bikeBuilders).",
+      "highlights": [
+        "Implemented JWT authentication with BCrypt password hashing and Google OAuth2 sign-in, enforcing role-based access control (Owner/Mechanic/Customer) at the endpoint level.",
+        "Modeled the domain (customers, vehicles, service records, invoices, work logs) with Spring Data JPA/MySQL and Flyway-managed schema migrations in a layered controller-service-repository architecture.",
+        "Built the companion mobile app with local-first SQLite storage, SMS service reminders, and automatic Google Drive backup/sync so it works fully offline."
+      ],
+      "tech": ["Spring Boot 3", "Java 17", "React Native", "Expo", "MySQL", "JWT", "Google OAuth2"],
+      "githubLink": "https://github.com/itswael/BikeGarage",
+      "videoLink": "",
+      "liveLink": "",
+      "screenshots": []
+    },
+    {
+      "id": 10,
+      "title": "Textsy — Real-Time Social Chat App",
+      "description": "React Native (Expo, TypeScript) interest-based social/chat app with a Node.js/Express backend implementing real-time messaging via Socket.io.",
+      "highlights": [
+        "Designed the backend data layer with MongoDB/Mongoose (users, chats, messages) and Redis caching.",
+        "Implemented Firebase-token-based authentication middleware with JWT, Helmet, CORS, and rate limiting."
+      ],
+      "tech": ["React Native", "Expo", "TypeScript", "Node.js", "Express", "Socket.io", "MongoDB", "Redis"],
+      "githubLink": "https://github.com/itswael/Textsy",
+      "videoLink": "",
+      "liveLink": "",
+      "screenshots": []
+    },
+    {
+      "id": 11,
+      "title": "RepoMind — AI-Powered Engineering Workflow Automation Platform",
+      "description": "Full-stack platform using Python (FastAPI), Next.js, PostgreSQL, and LLM APIs to automate engineering workflows, cutting manual backlog management effort by 80%.",
+      "highlights": [
+        "Built event-driven backend services using Kafka and asynchronous workers to process 1,000+ transcript chunks with fault-tolerant execution.",
+        "Implemented semantic retrieval and vector search with FAISS and PGVector across 10K+ embeddings, improving extraction accuracy by 30%.",
+        "Built a Next.js frontend so users can generate engineering artifacts from AI-powered workflows in under 10 seconds."
+      ],
+      "tech": ["Python", "FastAPI", "Next.js", "PostgreSQL", "Kafka", "FAISS", "PGVector", "LLM APIs"],
+      "githubLink": "https://github.com/itswael/RepoMind",
+      "videoLink": "",
+      "liveLink": "",
+      "screenshots": []
+    },
+    {
+      "id": 12,
+      "title": "Distributed URL Shortener",
+      "description": "Scalable URL-shortening service built with Java, Spring Boot, PostgreSQL, and Redis, deployed on Docker and AWS following object-oriented design principles.",
+      "highlights": [
+        "Implemented Redis caching and database sharding strategies to support high-volume requests.",
+        "Designed RESTful APIs and backend services via a microservice architecture."
+      ],
+      "tech": ["Java", "Spring Boot", "PostgreSQL", "Redis", "Docker", "AWS"],
+      "githubLink": "https://github.com/itswael/url-shortener",
+      "videoLink": "",
+      "liveLink": "",
+      "screenshots": []
     }
   ]
 }

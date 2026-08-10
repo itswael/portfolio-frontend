@@ -18,13 +18,13 @@ export default function About() {
                     <div className={cn(componentStyles.tile, "lg:col-span-2 flex flex-col justify-center")}>
                         <span className={cn(componentStyles.kicker, "mb-3")}>// about me</span>
                         <p className={cn(componentStyles.text.bodyLarge, "mb-4")}>
-                            I build software that scales, performs, and actually solves problems. From distributed backend systems to AI-powered platforms, I enjoy turning complex ideas into reliable products with clean engineering and real-world impact.
+                            I build backend systems and AI-powered platforms that scale, perform, and actually solve problems — from distributed Java/Spring Boot microservices processing millions of daily events to LLM-driven pipelines that turn raw data into decisions.
                         </p>
                         <p className={cn(componentStyles.text.body, "mb-4")}>
                             I'm a software engineer who genuinely enjoys building things — especially the kind of systems people depend on every day without ever noticing. I like solving difficult problems, simplifying complexity, and creating software that feels fast, reliable, and thoughtfully designed.
                         </p>
                         <p className={componentStyles.text.body}>
-                            Most of my work lives in backend engineering, cloud infrastructure, and scalable systems, but lately I've also been exploring AI systems and modern product engineering. What drives me most is curiosity — I care about building things the right way, not just the quick way.
+                            Most of my work lives in backend engineering, cloud infrastructure, and scalable systems — lately that's meant building agentic AI and RAG platforms at the University of Florida, on top of the Java/Spring Boot and Golang/Python foundations from my earlier work. What drives me most is curiosity — I care about building things the right way, not just the quick way.
                         </p>
                     </div>
 
@@ -56,7 +56,7 @@ export default function About() {
 
                         <div className={componentStyles.tile}>
                             <span className={cn(componentStyles.kicker, "mb-2")}>currently</span>
-                            <div className="font-semibold text-slate-100">Graduate Research Assistant</div>
+                            <div className="font-semibold text-slate-100">Software Engineer</div>
                             <div className="text-sm text-slate-400">University of Florida</div>
                         </div>
 

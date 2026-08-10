@@ -24,7 +24,7 @@ const HeroPage = () => {
                         Mohammad Wael
                     </h1>
                     <p className={cn(componentStyles.text.bodyLarge, "mb-10 max-w-2xl mx-auto")}>
-                        At the intersection of engineering and exploration — from scalable APIs to AI-driven insights. My work spans resilient backends, intuitive UIs, cloud deployment, robust databases, and intelligent automation.
+                        I design and build backend systems and AI-powered platforms — from distributed microservices handling millions of daily events to LLM-driven pipelines that turn data into decisions. Deep roots in backend and cloud infrastructure, comfortable across the full stack.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4 mb-14">
                         <button
