@@ -13,6 +13,10 @@ const CATEGORY_BY_ID = {
     6: 'data · ml',
     7: 'ai · rag',
     8: 'ai · eval',
+    9: 'full-stack · mobile',
+    10: 'full-stack · mobile',
+    11: 'ai · automation',
+    12: 'backend',
 };
 
 const FEATURED_ID = 4; // GatorCan
